@@ -1,0 +1,55 @@
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #141D2F;
+    color: white;
+
+    >div {
+        >img {
+            height: 800px;
+            object-fit: contain;
+            background-image: url('./../../assets/image.png');
+            background-position: center;
+            border: none;
+        }
+    }
+}
+
+.name_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+
+    >button {
+        cursor: pointer;
+        padding: 15px 30px;
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: #70E61C;
+        color: white;
+        font-size: 22px;
+        border: none;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            background-color: rgb(140, 0, 255);
+            border-color: rgb(140, 0, 255);
+            transform: scale(1.25);
+        }
+    }
+}
+
+.name_atf {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.name_iam {
+    transform: rotate(-90deg);
+}
