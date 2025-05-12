@@ -8,6 +8,7 @@ section {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 4;
 }
 
 .navbar {
@@ -39,7 +40,7 @@ section {
 
         >.de_translate {
             cursor: pointer;
-            padding: 5px 8px;
+            padding: 3px 8px;
             color: white;
             border: 1px solid #70E61C;
             border-radius: 10px;
@@ -54,7 +55,7 @@ section {
 
         >.en_translate {
             cursor: pointer;
-            padding: 5px 8px;
+            padding: 3px 8px;
             color: white;
             border: none;
             border-radius: 10px;

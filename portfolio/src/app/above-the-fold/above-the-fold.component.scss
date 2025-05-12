@@ -1,20 +1,42 @@
 section {
     height: 100vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 120px;
     align-items: center;
     background-color: #141D2F;
     color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
 
-    >div {
-        >img {
-            height: 800px;
-            object-fit: contain;
-            background-image: url('./../../assets/image.png');
-            background-position: center;
-            border: none;
-        }
-    }
+.name_picture {
+    position: relative;
+    width: 400px;
+    height: 600px;
+}
+
+.img-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 550px;
+}
+
+.img-top {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 700px;
+    height: 700px;
+    z-index: 2;
+}
+
+.img-bottom {
+    z-index: 3;
+    border-radius: 50px;
 }
 
 .name_content {
@@ -33,23 +55,55 @@ section {
         color: white;
         font-size: 22px;
         border: none;
-        transition: 0.2s ease-in-out;
+        transition: 0.1s ease-in-out;
+        z-index: 1;
 
         &:hover {
-            background-color: rgb(140, 0, 255);
-            border-color: rgb(140, 0, 255);
-            transform: scale(1.25);
+            background-color: #9747FF;
+            border-color: #9747FF;
+            transform: scale(1.15);
         }
     }
 }
 
 .name_atf {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+.name_whoWhat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 120%;
+}
+
 .name_iam {
     transform: rotate(-90deg);
+    line-height: 120%;
+    font-size: 64px;
+    letter-spacing: 0%;
+    width: 152px;
+    height: 63px;
+    padding-left: 20px;
+}
+
+.background_atf {
+    width: 100%;
+    position: absolute;
+    top: 290px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.scroll_down_text {
+    transform: rotate(90deg);
+    z-index: 1;
+    position: absolute;
+    right: 100px;
+    top: 900px;
+    font-size: 30px;
 }
