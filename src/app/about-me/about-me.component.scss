@@ -32,12 +32,20 @@ section {
     color: white;
     padding-left: 100px;
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
 }
 
 .img_abMe {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 320px;
+    top: 250px;
     right: 0;
 }
