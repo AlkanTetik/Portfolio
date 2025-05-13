@@ -1,0 +1,43 @@
+section {
+    position: absolute;
+    top: 940px;
+    height: 950px;
+    width: 100%;
+    background-color: #141D2F;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+
+    >div {
+        >div {
+            >h1 {
+                z-index: 5;
+                color: rgb(255, 255, 255);
+                font-size: 90px;
+                font-weight: 700;
+                padding-left: 100px;
+            }
+        }
+    }
+}
+
+.info_title {
+    color: white;
+    padding-left: 100px;
+    display: flex;
+    padding-top: 20px;
+}
+
+.info_content {
+    color: white;
+    padding-left: 100px;
+    padding-top: 20px;
+}
+
+.img_abMe {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 320px;
+    right: 0;
+}
