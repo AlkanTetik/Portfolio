@@ -1,0 +1,95 @@
+:host {
+  position: static;
+  /* Standard, kann auch ganz weg */
+  display: block;
+  /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
+}
+
+section {
+  color: white;
+  height: 550px;
+  width: 100%;
+  background-color: #141D2F;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 90px;
+  font-weight: 700;
+}
+
+@keyframes popUpDown {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.skills_images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-left: 100px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0px 80px;
+
+  >img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      animation: popUpDown 0.4s ease-in-out; // bewegt das Bild 10px nach oben
+    }
+  }
+}
+
+.skills_title {
+  display: flex;
+  flex-direction: column; // ← das ist entscheidend!
+  align-items: flex-end; // oder flex-start / center, je nachdem wie du es ausrichten willst
+  gap: 50px; // Abstand zwischen den Elementen
+  padding: 0 100px;
+
+  >div {
+    >button {
+      cursor: pointer;
+      padding: 15px 30px;
+      border: none;
+      background-color: #70E61C;
+      color: white;
+      border-radius: 10px;
+      font-size: 23px;
+      transition: 0.1s ease-in-out;
+      transform-origin: right; // wichtig: Vergrößerung soll nach links wirken
+
+      &:hover {
+        background-color: #9747FF;
+        transform: scaleX(1.05) scaleY(1.05); // nur horizontal vergrößern
+        padding: 18px 35px;
+      }
+    }
+  }
+}
+
+.skills_title_img {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.skills_title_img h1 {
+  margin: 0;
+  font-size: 90px;
+  font-weight: 700;
+  color: white;
+}

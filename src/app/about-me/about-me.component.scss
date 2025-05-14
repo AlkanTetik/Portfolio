@@ -1,12 +1,17 @@
+:host {
+  position: static;   /* Standard, kann auch ganz weg */
+  display: block;     /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
+}
+
 section {
-    position: absolute;
-    top: 940px;
     height: 950px;
     width: 100%;
     background-color: #141D2F;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 100px;
+    padding-top: 50px;
 
     >div {
         >div {
@@ -45,7 +50,5 @@ section {
 .img_abMe {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 250px;
-    right: 0;
+    z-index: 1;
 }

@@ -1,3 +1,9 @@
+:host {
+  position: static;   /* Standard, kann auch ganz weg */
+  display: block;     /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
+}
+
+
 section {
     height: 100vh;
     display: flex;
@@ -6,10 +12,6 @@ section {
     align-items: center;
     background-color: #141D2F;
     color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 .name_picture {
@@ -136,5 +138,5 @@ section {
     position: absolute;
     top: 850px;
     right: 0;
-    z-index: 2;
+    z-index: 1;
 }
