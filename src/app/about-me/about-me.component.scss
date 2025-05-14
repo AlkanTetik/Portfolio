@@ -10,7 +10,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 100px;
+    gap: 10px;
     padding-top: 50px;
 
     >div {
@@ -50,5 +50,4 @@ section {
 .img_abMe {
     display: flex;
     align-items: center;
-    z-index: 1;
 }
