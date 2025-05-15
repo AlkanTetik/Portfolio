@@ -1,8 +1,6 @@
 :host {
   position: static;
-  /* Standard, kann auch ganz weg */
   display: block;
-  /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
 }
 
 section {
@@ -49,16 +47,16 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-      animation: popUpDown 0.4s ease-in-out; // bewegt das Bild 10px nach oben
+      animation: popUpDown 0.4s ease-in-out; 
     }
   }
 }
 
 .skills_title {
   display: flex;
-  flex-direction: column; // ← das ist entscheidend!
-  align-items: flex-end; // oder flex-start / center, je nachdem wie du es ausrichten willst
-  gap: 25px; // Abstand zwischen den Elementen
+  flex-direction: column; 
+  align-items: flex-end;
+  gap: 25px; 
   padding: 0 100px;
 
   >div {
@@ -71,11 +69,11 @@ h1 {
       border-radius: 10px;
       font-size: 23px;
       transition: 0.1s ease-in-out;
-      transform-origin: right; // wichtig: Vergrößerung soll nach links wirken
+      transform-origin: right; 
 
       &:hover {
         background-color: #9747FF;
-        transform: scaleX(1.05) scaleY(1.05); // nur horizontal vergrößern
+        transform: scaleX(1.05) scaleY(1.05); 
         padding: 18px 35px;
       }
     }
