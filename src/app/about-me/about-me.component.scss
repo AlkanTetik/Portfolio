@@ -4,16 +4,18 @@
 }
 
 section {
-    height: 950px;
+    height: auto;
     width: 100%;
     background-color: #141D2F;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 10px;
-    padding-top: 50px;
+    padding-top: 200px;
+    padding-bottom: 200px;
 
     >div {
+         z-index: 1;
         >div {
             >h1 {
                 z-index: 5;
