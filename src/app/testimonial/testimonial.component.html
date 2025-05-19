@@ -17,13 +17,16 @@
         <img [src]="testimonials[currentIndex].image" alt="Photo">
     </div>
 
+    <img class="testimonialshadow" src="../../assets/testimonialshadow.png" alt="">
+
     <div class="controls">
         <button (click)="prev()"><img src="../../assets/greenarrow.png" alt=""></button>
         <div class="dots">
             <span *ngFor="let t of testimonials; let i = index" [class.active]="i === currentIndex"
                 (click)="goToSlide(i)"></span>
         </div>
-        <button (click)="next()"><img style="transform: rotate(180deg);" src="../../assets/greenarrow.png" alt=""></button>
+        <button (click)="next()"><img style="transform: rotate(180deg);" src="../../assets/greenarrow.png"
+                alt=""></button>
     </div>
 
 </section>
