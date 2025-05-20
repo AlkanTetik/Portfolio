@@ -60,7 +60,7 @@ h1 {
   padding: 0 100px;
 
   >div {
-    >button {
+    >a {
       cursor: pointer;
       padding: 15px 30px;
       border: none;
@@ -70,6 +70,7 @@ h1 {
       font-size: 23px;
       transition: 0.1s ease-in-out;
       transform-origin: right; 
+      text-decoration: none;
 
       &:hover {
         background-color: #9747FF;
@@ -92,3 +93,27 @@ h1 {
   font-weight: 700;
   color: white;
 }
+
+.image-switch {
+  position: relative;
+}
+
+.image-switch img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.hover-img {
+  opacity: 0;
+}
+
+.image-switch:hover .hover-img {
+  opacity: 1;
+}
+
+.image-switch:hover .default-img {
+  opacity: 0;
+}
+

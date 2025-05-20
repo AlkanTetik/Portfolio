@@ -22,7 +22,9 @@ section {
         align-items: center;
         font-size: 23px;
 
-        >div {
+        >a {
+            text-decoration: none;
+            color: white;
             cursor: pointer;
             transition: 0.2s ease-in-out;
 

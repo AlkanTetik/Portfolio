@@ -1,6 +1,8 @@
 :host {
-  position: static;   /* Standard, kann auch ganz weg */
-  display: block;     /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
+    position: static;
+    /* Standard, kann auch ganz weg */
+    display: block;
+    /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
 }
 
 
@@ -48,7 +50,7 @@ section {
     align-items: center;
     font-size: 70px;
 
-    >button {
+    >a {
         cursor: pointer;
         padding: 15px 30px;
         margin-top: 20px;
@@ -58,6 +60,7 @@ section {
         font-size: 22px;
         border: none;
         transition: 0.1s ease-in-out;
+        text-decoration: none;
         z-index: 1;
 
         &:hover {
