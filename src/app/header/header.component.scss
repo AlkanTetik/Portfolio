@@ -76,3 +76,22 @@ section {
     display: flex;
     gap: 2px;
 }
+
+@media screen and (max-width: 1000px) {
+    section {
+        padding: 20px 40px;
+    }
+
+    .navbar {
+        gap: 0px;
+
+        >div {
+            font-size: 18px;
+        }
+    }
+
+    .nav_name {
+        font-size: 25px;
+    }
+    
+}
