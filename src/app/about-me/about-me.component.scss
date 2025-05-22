@@ -1,6 +1,8 @@
 :host {
-  position: static;   /* Standard, kann auch ganz weg */
-  display: block;     /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
+    position: static;
+    /* Standard, kann auch ganz weg */
+    display: block;
+    /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
 }
 
 section {
@@ -8,7 +10,6 @@ section {
     width: 100%;
     background-color: #141D2F;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     position: relative;
     gap: 10px;
@@ -16,7 +17,8 @@ section {
     padding-bottom: 200px;
 
     >div {
-         z-index: 1;
+        z-index: 1;
+
         >div {
             >h1 {
                 z-index: 5;
@@ -43,9 +45,10 @@ section {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     >div {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 20px;
     }
 }
@@ -53,4 +56,99 @@ section {
 .img_abMe {
     display: flex;
     align-items: center;
+    padding-top: 20px;
+
+    >.faceself {
+        height: 650px;
+        position: absolute;
+        right: 340px;
+    }
+}
+
+@media (max-width: 1350px) {
+    section {
+        >div {
+            >div {
+                >h1 {
+                    font-size: 70px;
+                }
+            }
+        }
+    }
+
+    .img_abMe {
+        display: flex;
+        align-items: center;
+        padding-top: 70px;
+
+        >.faceself {
+            height: 500px;
+            position: absolute;
+            right: 205px;
+        }
+
+        >.greenellipse {
+            width: 350px;
+        }
+
+        >.greenline {
+            width: 150px;
+            height: 4px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    section {
+        justify-content: center;
+
+        >div {
+            padding-left: 20px;
+
+            >div {
+                padding-left: 20px;
+
+                >h1 {
+                    font-size: 70px;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .img_abMe {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    section {
+        font-size: 14px;
+        padding-top: 100px;
+        padding-bottom: 150px;
+
+        >div {
+
+            >div {
+                >h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        font-size: 11px;
+
+        >div {
+
+            >div {
+                >h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
 }
