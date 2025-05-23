@@ -1,0 +1,44 @@
+<section class="container">
+    <div class="contact-header">
+        <div class="contact-line"></div>
+        <h1>Contact</h1>
+    </div>
+
+    <div class="contact-form">
+        <div>
+            <h2>Got a Problem to solve?</h2>
+            <div>Encourage people to contact you and describe what role you are interested in. <br> Show that you will
+                add
+                value to their projects through your work.</div><br>
+            <div>Need a Frontend developer? Contact me!</div>
+        </div>
+        <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+            <input [(ngModel)]="contactData.name" type="text" id="fname" name="firstname" placeholder="Your name"
+                required>
+
+            <input [(ngModel)]="contactData.email" type="text" id="lname" name="lastname" placeholder="Your Email"
+                required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="subject" name="subject"
+                placeholder="Your message" style="height:200px" required></textarea>
+            @if(message.valid && message.touched) {
+            <p class="error">Message is required</p>
+            }
+
+            <label style="margin: 1rem 0; display: flex; justify-content: flex-start;">
+                <input type="checkbox" name="privacy" ngModel required
+                    style="margin-right: 0.5rem; background-color: transparent; cursor: pointer;">
+                <div style="font-size: 14px;">I've read the<a href="/datenschutz" target="_blank"
+                        style="padding: 0 5px; text-decoration: none; color: #9747FF;;">privacy policy</a>and agree to
+                    the processing of my data as outlined.</div>
+            </label>
+
+            <button type="submit">Send Message :)</button>
+        </form>
+         <img class="contactshadow" src="../../assets/contactshadow.png" alt="">
+         <a href="#header">
+            <img class="goupbutton" src="../../assets/goupbutton.png" alt="">
+         </a>
+    </div>
+</section>
