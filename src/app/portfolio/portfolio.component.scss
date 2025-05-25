@@ -1,12 +1,13 @@
 section {
     height: 300px;
     background-color: #141D2F;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     >div {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-top: 100px;
         gap: 40px;
 
         >h1 {
@@ -28,7 +29,6 @@ section {
 .portfolio {
     height: auto;
     position: relative;
-    // padding: 4rem 1rem;
 }
 
 .portfolio .shadow-left {
@@ -42,10 +42,12 @@ section {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    padding-top: 100px;
 }
 
 .portfolio h1 {
     font-size: 2.5rem;
+    z-index: 1;
 }
 
 .portfolio .subline {
@@ -53,6 +55,17 @@ section {
     margin-top: 1rem;
     color: #ccc;
     text-align: center;
+    padding: 0 20px;
+    z-index: 1;
+}
+
+.purpleshadow {
+    position: absolute;
+    left: 0;
+}
+
+.mobilePurpleshadow {
+    display: none;
 }
 
 .projects-grid {
@@ -66,6 +79,7 @@ section {
         align-items: center;
         gap: 40px;
         color: white;
+        z-index: 1;
 
         &.reverse {
             flex-direction: row-reverse;
@@ -177,5 +191,133 @@ section {
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1350px) {
+    section {
+
+        >div {
+            >h1 {
+                font-size: 70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    .projects-grid {
+        padding: 0;
+
+        .project-card {
+            flex-direction: column;
+            gap: 0px;
+            padding-top: 50px;
+            z-index: 1;
+        }
+
+        .project-card.reverse {
+            flex-direction: column;
+        }
+    }
+
+    .purpleshadow {
+        display: none;
+    }
+
+    .mobilePurpleshadow {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -70px;
+        z-index: -1;
+    }
+
+    .projects-grid .project-card .info {
+        align-items: center;
+        text-align: center;
+    }
+
+    .projects-grid .project-card .project-el-pollo>p {
+        text-align: center;
+    }
+
+    .projects-grid .project-card img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 800px) {
+    .portfolio .shadow-left {
+        >img {
+            width: 230px;
+            left: 0;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .header-content {
+        img {
+            width: 50px;
+            height: 3px;
+            z-index: 1;
+
+        }
+    }
+
+    .projects-grid .project-card .info {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    .projects-grid .project-card .info h3 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    section {
+
+        >div {
+            gap: 20px;
+
+            >h1 {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .projects-grid .project-card img {
+        width: 250px;
+    }
+
+    .portfolio .subline {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+
+        >div {
+            >h1 {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .portfolio .subline {
+        font-size: 11px;
+    }
+
+    .projects-grid .project-card .info {
+        font-size: 11px;
+        padding: 0 20px;
+    }
+
+    .projects-grid .project-card .info h3 {
+        font-size: 18px;
     }
 }

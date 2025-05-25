@@ -126,7 +126,7 @@ section {
     top: 1000px;
     left: 0;
     right: 0;
-    z-index: 1;
+    z-index: 2;
     display: flex;
     gap: 20px;
 }
@@ -363,5 +363,19 @@ section {
 
     .name_whoWhat {
         line-height: 90%;
+    }
+
+    .menu-toggle>img {
+        width: 25px;
+        height: 20px;
+    }
+
+    .img-top {
+        top: 60px;
+    }
+
+    .img-bottom {
+        width: 300px;
+        top: 0;
     }
 }

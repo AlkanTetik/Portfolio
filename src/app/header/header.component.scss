@@ -95,7 +95,7 @@ section {
 @media (max-width: 1150px) {
     section {
         padding: 30px 50px;
-    } 
+    }
 
     .navbar {
 
@@ -174,5 +174,20 @@ section {
             flex-direction: row;
             gap: 5px;
         }
+    }
+}
+
+@media (max-width: 550px) {
+    .menu-toggle>img {
+        width: 20px;
+        height: 15px;
+    }
+
+    .nav_name {
+        font-size: 22px;
+    }
+
+    section[_ngcontent-ng-c4151642039] {
+        padding: 10px 20px;
     }
 }

@@ -11,6 +11,15 @@ section {
     border-radius: 2px;
 }
 
+.name {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.name-year {
+    font-size: 23px;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -30,26 +39,30 @@ section {
 }
 
 a {
-  position: relative;
-  top: -10px;
-  text-decoration: none; 
-  color: inherit;
-  font-weight: 300;
+    position: relative;
+    top: -10px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: 300;
+}
+
+.responsiveNotice {
+    display: none;
 }
 
 a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background-color: #70E61C;
-  transition: width 0.1s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #70E61C;
+    transition: width 0.1s ease;
 }
 
 a:hover::after {
-  width: 40%; 
+    width: 40%;
 }
 
 .hover_image {
@@ -58,5 +71,49 @@ a:hover::after {
 
     &:hover {
         transform: scale(1.2);
+    }
+}
+
+@media (max-width: 1080px) {
+    .name {
+        font-size: 40px;
+    }
+
+    .name-year {
+        font-size: 18px;
+    }
+
+    .firstnotice {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-container {
+        padding-top: 30px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .firstNotice {
+        display: none;
+    }
+
+    .responsiveNotice {
+        display: flex;
+        font-size: 15px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .name-year {
+        font-size: 16px;
+    }
+
+    .hover_image {
+        width: 25px;
+        height: 25px;
     }
 }
