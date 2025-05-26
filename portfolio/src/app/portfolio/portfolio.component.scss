@@ -29,7 +29,6 @@ section {
 .portfolio {
     height: auto;
     position: relative;
-    // padding: 4rem 1rem;
 }
 
 .portfolio .shadow-left {
@@ -60,6 +59,15 @@ section {
     z-index: 1;
 }
 
+.purpleshadow {
+    position: absolute;
+    left: 0;
+}
+
+.mobilePurpleshadow {
+    display: none;
+}
+
 .projects-grid {
     height: auto;
     display: flex;
@@ -71,6 +79,7 @@ section {
         align-items: center;
         gap: 40px;
         color: white;
+        z-index: 1;
 
         &.reverse {
             flex-direction: row-reverse;
@@ -212,6 +221,19 @@ section {
         }
     }
 
+    .purpleshadow {
+        display: none;
+    }
+
+    .mobilePurpleshadow {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -70px;
+        z-index: -1;
+    }
+
     .projects-grid .project-card .info {
         align-items: center;
         text-align: center;
@@ -226,10 +248,19 @@ section {
     }
 }
 
+@media (max-width: 800px) {
+    .portfolio .shadow-left {
+        >img {
+            width: 230px;
+            left: 0;
+        }
+    }
+}
+
 @media (max-width: 570px) {
     .header-content {
         img {
-            width: 60px;
+            width: 50px;
             height: 3px;
             z-index: 1;
 

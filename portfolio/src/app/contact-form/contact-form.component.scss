@@ -1,4 +1,3 @@
-/* Style inputs with type="text", select elements and textareas */
 section {
     display: flex;
     flex-direction: column;
@@ -10,10 +9,10 @@ section {
 
     .contact-form {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         padding: 50px;
         padding-bottom: 150px;
-        gap: 150px;
+        gap: 20px;
     }
 
     .contact-header {
@@ -98,7 +97,7 @@ section {
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        transition: 0.2s ease-in-out; 
+        transition: 0.2s ease-in-out;
 
         &:hover {
             transform: scaleX(1.15) scaleY(1.15);
@@ -117,8 +116,8 @@ section {
 
     .goupbutton {
         position: absolute;
-        bottom: 70px;
-        right: 250px;
+        bottom: 40px;
+        right: 40px;
 
         &:hover {
             filter: invert(30%) sepia(91%) saturate(702%) hue-rotate(66deg) brightness(100%) contrast(88%);
@@ -126,4 +125,102 @@ section {
         }
     }
 
+    .labelprivacy {
+        margin: 1rem 0;
+        display: flex;
+        justify-content: flex-start;
+        z-index: 1;
+    }
+
+    .privacypolicy {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1350px) {
+    section {
+        .contact-header h1 {
+            font-size: 70px;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    section .contact-form {
+        flex-direction: column;
+    }
+
+    section .contactshadow {
+        height: 350px;
+        width: 350px;
+        bottom: -130px;
+        z-index: 0;
+    }
+
+    section .contact-line {
+        width: 25%;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .contact-form {
+        >div {
+            >div {
+                font-size: 14px;
+            }
+
+            >h2 {
+                font-size: 20px;
+            }
+        }
+    }
+
+    section .contact-line {
+        width: 20%;
+    }
+
+    section .contact-form {
+        padding: 20px;
+        padding-bottom: 100px;
+    }
+
+    section {
+        .contact-header h1 {
+            font-size: 50px;
+        }
+    }
+
+    section input[type=text],
+    section textarea {
+        padding: 5px 10px;
+    }
+
+    section button[type=submit] {
+        padding: 10px 20px;
+        font-size: 15px;
+        z-index: 1;
+    }
+
+    section .goupbutton {
+        bottom: 20px;
+        right: 10px;
+        width: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    section {
+        .contact-header h1 {
+            font-size: 40px;
+        }
+    }
+
+    .contact-form>div>div {
+        font-size: 11px;
+    }
+
+    section .privacypolicy {
+        font-size: 12px;
+    }
 }

@@ -1,22 +1,23 @@
 <section class="testimonial-container">
     <div class="quote-mark">“</div>
 
-    <div class="testimonial-box">
-        <p class="quote-text">
-            {{ testimonials[currentIndex].quote }}
-        </p>
-        <div>
-            <hr class="divider" />
-            <p class="author">
-                {{ testimonials[currentIndex].name }} - {{ testimonials[currentIndex].role }}
+    <div class="testimonial-boxcircle">
+        <div class="testimonial-box">
+            <p class="quote-text">
+                {{ testimonials[currentIndex].quote }}
             </p>
+            <div>
+                <hr class="divider" />
+                <p class="author">
+                    {{ testimonials[currentIndex].name }} - {{ testimonials[currentIndex].role }}
+                </p>
+            </div>
+        </div>
+
+        <div class="image-circle">
+            <img [src]="testimonials[currentIndex].image" alt="Photo">
         </div>
     </div>
-
-    <div class="image-circle">
-        <img [src]="testimonials[currentIndex].image" alt="Photo">
-    </div>
-
     <img class="testimonialshadow" src="../../assets/testimonialshadow.png" alt="">
 
     <div id="contact" class="controls">
