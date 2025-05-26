@@ -1,8 +1,6 @@
 :host {
     position: static;
-    /* Standard, kann auch ganz weg */
     display: block;
-    /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
 }
 
 section {
@@ -75,6 +73,15 @@ section {
     z-index: 2;
     display: flex;
     gap: 20px;
+}
+
+.hover_image {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+    }
 }
 
 .email_text {
