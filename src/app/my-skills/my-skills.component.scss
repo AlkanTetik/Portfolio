@@ -80,12 +80,14 @@ h1 {
   align-items: flex-end;
   gap: 25px;
   padding: 0 100px;
+  z-index: 1;
 }
 
 .skills_title_img {
   display: flex;
   align-items: center;
   gap: 20px;
+  z-index: 1;
 }
 
 .skills_title_img h1 {
@@ -93,6 +95,7 @@ h1 {
   font-size: 90px;
   font-weight: 700;
   color: white;
+  z-index: 1;
 }
 
 .skills_title_text {
@@ -134,6 +137,7 @@ h1 {
 .vectorsmall {
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 
 .image-switch {
@@ -238,10 +242,12 @@ h1 {
   .skills_title_img h1 {
     font-size: 50px;
     padding-right: 80px;
+    z-index: 1;
   }
 
   .skills_title {
     padding: 0;
+    z-index: 1;
   }
 
   .skills_looking_text {

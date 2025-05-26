@@ -21,6 +21,10 @@ section {
     z-index: 5;
 }
 
+.navbar_translation button.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
 
 .navbar {
     display: flex;
