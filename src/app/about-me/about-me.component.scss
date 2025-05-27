@@ -11,9 +11,10 @@ section {
     justify-content: space-between;
     position: relative;
     gap: 10px;
-    padding-top: 150px;
+    padding-top: 20px;
     padding-bottom: 200px;
     color: white;
+    z-index: 2;
 
 
     >div {
@@ -36,11 +37,13 @@ section {
     padding-left: 100px;
     display: flex;
     padding-top: 20px;
+    padding-right: 20px;
 }
 
 .info_content {
     color: white;
     padding-left: 100px;
+    padding-right: 20px;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -53,10 +56,17 @@ section {
     }
 }
 
+.purpleshadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
 .img_abMe {
     display: flex;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 150px;
 
     >.faceself {
         height: 650px;
@@ -66,13 +76,9 @@ section {
 }
 
 .buttons_atf {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
     display: flex;
     gap: 20px;
+    padding-bottom: 100px;
 }
 
 .hover_image {
@@ -102,7 +108,7 @@ section {
     .img_abMe {
         display: flex;
         align-items: center;
-        padding-top: 70px;
+        padding-top: 220px;
 
         >.faceself {
             height: 500px;
@@ -155,7 +161,7 @@ section {
 @media (max-width: 550px) {
     section {
         font-size: 14px;
-        padding-top: 100px;
+        padding-top: 0;
         padding-bottom: 150px;
 
         >div {
