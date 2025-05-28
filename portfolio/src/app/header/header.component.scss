@@ -1,4 +1,4 @@
-section {
+.navbar-section  {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +97,7 @@ section {
 }
 
 @media (max-width: 1150px) {
-    section {
+    .navbar-section  {
         padding: 30px 50px;
     }
 
@@ -110,7 +110,7 @@ section {
 }
 
 @media screen and (max-width: 985px) {
-    section {
+    .navbar-section  {
         padding: 20px 40px;
     }
 
@@ -150,7 +150,7 @@ section {
     .navbar {
         flex-direction: column;
         position: absolute;
-        top: 80px;
+        top: 60px;
         right: 0;
         background-color: #525369;
         width: 100%;
@@ -191,7 +191,7 @@ section {
         font-size: 22px;
     }
 
-    section[_ngcontent-ng-c4151642039] {
+    .navbar-section {
         padding: 10px 20px;
     }
 }

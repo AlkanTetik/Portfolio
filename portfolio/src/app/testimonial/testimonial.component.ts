@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-testimonial',
@@ -7,7 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./testimonial.component.scss'],
   imports: [CommonModule]
 })
-export class TestimonialComponent {
+export class TestimonialComponent implements AfterViewInit {
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    this.checkScroll();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkScroll();
+  }
+
+  checkScroll() {
+    const fadeElems = this.el.nativeElement.querySelectorAll('.fade-right, .fade-left');
+    fadeElems.forEach((elem: HTMLElement) => {
+      const rect = elem.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 0.9) {  // 90% vom Viewport
+        elem.classList.add('in-view');
+      }
+    });
+  }
+
   testimonials = [
     {
       quote: "Alkan really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",

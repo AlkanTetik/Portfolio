@@ -26,15 +26,31 @@ section {
     }
 }
 
-.portfolio {
-    height: auto;
-    position: relative;
+.opacityImg {
+    transition: all 0.8s ease-in-out;
+    transform: translateX(-700px);
+    opacity: 0;
+
+    &.in-view {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.portfolio .shadow-left {
-    position: absolute;
-    left: 0;
-    top: -450px;
+.opacityReverseImg {
+    transition: all 0.8s ease-in-out;
+    transform: translateX(700px);
+    opacity: 0;
+
+
+    &.in-view {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.portfolio {
+    height: auto;
 }
 
 .portfolio .header-content {

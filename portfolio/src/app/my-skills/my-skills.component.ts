@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-my-skills',
@@ -6,6 +6,27 @@ import { Component } from '@angular/core';
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss'
 })
-export class MySkillsComponent {
+export class MySkillsComponent implements AfterViewInit {
+  constructor(private el: ElementRef) {}
 
+  ngAfterViewInit() {
+    this.checkScroll();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkScroll();
+  }
+
+  checkScroll() {
+    const fadeElems = this.el.nativeElement.querySelectorAll('section');
+    fadeElems.forEach((elem: HTMLElement) => {
+      const rect = elem.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 0.9) {  // 90% vom Viewport
+        elem.classList.add('in-view');
+      }
+    });
+  }
 }

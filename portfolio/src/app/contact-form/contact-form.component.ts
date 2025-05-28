@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,29 @@ import { FormsModule, NgForm } from '@angular/forms';
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })
-export class ContactFormComponent {
+export class ContactFormComponent implements AfterViewInit {
+  constructor(private el: ElementRef) {}
+
+  ngAfterViewInit() {
+    this.checkScroll();
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.checkScroll();
+  }
+
+  checkScroll() {
+    const fadeElems = this.el.nativeElement.querySelectorAll('.fade-down, .fade-up');
+    fadeElems.forEach((elem: HTMLElement) => {
+      const rect = elem.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top < windowHeight * 0.9) {  // 90% vom Viewport
+        elem.classList.add('in-view');
+      }
+    });
+  }
 
   http = inject(HttpClient);
 

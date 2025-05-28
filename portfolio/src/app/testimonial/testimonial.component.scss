@@ -6,9 +6,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column-reverse;
     height: auto;
     padding-top: 20px;
     padding-bottom: 150px;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease-out;
+
+    &.in-view {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease-out;
+
+    &.in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .testimonial-boxcircle {
@@ -19,9 +42,9 @@
 .quote-mark {
     font-size: 15rem;
     color: #9747FF;
-    position: relative;
-    top: -60px;
-    left: 35px;
+    position: absolute;
+    top: -200px;
+    left: -60px;
     z-index: 2;
 }
 
@@ -31,6 +54,7 @@
     padding: 40px 60px;
     max-width: 600px;
     background-color: transparent;
+    position: relative;
     z-index: 1;
 
     >div {
@@ -86,10 +110,9 @@
 .controls {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 380px;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: center;
+    padding-top: 40px;
+    z-index: 1;
 }
 
 .controls button {
@@ -135,25 +158,24 @@
 }
 
 @media (max-width: 1350px) {
-    .testimonial-container[_ngcontent-ng-c1570289702] {
+    .testimonial-container {
         padding: 1rem;
-        padding-right: 40px;
         padding-bottom: 150px
     }
 
-    .image-circle[_ngcontent-ng-c1819689889] {
+    .image-circle {
         width: 195px;
         height: 195px;
     }
 
-    .testimonial-box[_ngcontent-ng-c1819689889] {
+    .testimonial-box {
         padding: 20px 20px;
     }
 }
 
 @media (max-width: 1080px) {
 
-    .testimonial-boxcircle[_ngcontent-ng-c1819689889] {
+    .testimonial-boxcircle {
         display: flex;
         align-items: center;
         flex-direction: column-reverse;
@@ -161,40 +183,41 @@
         padding-top: 100px;
     }
 
-    .testimonial-box[_ngcontent-ng-c1819689889]>div[_ngcontent-ng-c1819689889] {
+    .testimonial-box>div {
         padding-top: 50px;
     }
 
-    .image-circle[_ngcontent-ng-c1819689889][_ngcontent-ng-c1819689889] {
+    .image-circle {
         width: 195px;
         height: 195px;
         margin-left: 0;
     }
 
     .quote-mark {
-        display: none;
-    }
-}
-
-.controls[_ngcontent-ng-c1819689889] {
-    top: 600px;
-}
-
-@media (max-width: 646px) {
-    .quote-mark[_ngcontent-ng-c1570289702] {
-        font-size: 12rem;
-        color: #9747FF;
-        position: relative;
-        top: -70px;
-        left: 25px;
+        font-size: 8rem;
+        top: -120px;
+        left: -15px;
         z-index: 2;
     }
 
-    .testimonial-box[_ngcontent-ng-c1819689889]>div[_ngcontent-ng-c1819689889]>hr[_ngcontent-ng-c1819689889] {
+    .controls {
+        top: 600px;
+    }
+
+    .testimonialshadow {
+        position: absolute;
+        bottom: 150px;
+        right: 0;
+        width: 200px;
+    }
+}
+
+@media (max-width: 646px) {
+    .testimonial-box>div>hr {
         width: 40%;
     }
 
-    .testimonial-box[_ngcontent-ng-c1819689889] {
+    .testimonial-box {
         padding: 20px 10px;
     }
 }
@@ -208,25 +231,25 @@
         font-size: 14px;
     }
 
-    .testimonial-box[_ngcontent-ng-c1819689889]>div[_ngcontent-ng-c1819689889]>hr[_ngcontent-ng-c1819689889] {
+    .testimonial-box>div>hr {
         width: 30%;
         margin-block-start: 0;
         margin-block-end: 5px;
     }
 
-    .testimonial-box[_ngcontent-ng-c1819689889]>div[_ngcontent-ng-c1819689889] {
+    .testimonial-box>div {
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
     }
 
-    .controls[_ngcontent-ng-c1819689889] button[_ngcontent-ng-c1819689889]>img[_ngcontent-ng-c1819689889] {
+    .controls button>img {
         width: 30px;
         height: 30px;
     }
 
-    .dots[_ngcontent-ng-c1819689889] span[_ngcontent-ng-c1819689889] {
+    .dots span {
         width: 6px;
         height: 6px;
     }
@@ -238,7 +261,7 @@
 }
 
 @media (max-width: 400px) {
-    .quote-text[_ngcontent-ng-c1819689889] {
+    .quote-text {
         font-size: 11px;
     }
 }

@@ -137,6 +137,28 @@ section {
     }
 }
 
+.fade-up {
+    opacity: 0;
+    transform: translateY(80px);
+    transition: all 0.8s ease-out;
+
+    &.in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: all 0.8s ease-out;
+
+    &.in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @media (max-width: 1350px) {
     section {
         .contact-header h1 {
@@ -204,7 +226,6 @@ section {
 
     section .goupbutton {
         bottom: 20px;
-        right: 10px;
         width: 30px;
     }
 }

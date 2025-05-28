@@ -10,6 +10,29 @@ section {
     align-items: center;
     background-color: #141D2F;
     color: white;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.6s ease-out;
+    &.in-view {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 0.6s ease-out;
+    &.in-view {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .name_picture {
@@ -103,7 +126,7 @@ section {
 
 .background_atf {
     height: 600px;
-    width: 100%;
+    width: 100vw;
     position: absolute;
     top: 550px;
     left: 0;
@@ -119,6 +142,7 @@ section {
     right: 100px;
     top: 900px;
     font-size: 25px;
+    z-index: 3;
 }
 
 .buttons_atf {
@@ -175,10 +199,12 @@ section {
 
     .img-bottom {
         width: 350px;
+        top: -70px;
     }
 
     .name_content {
         font-size: 50px;
+        padding-top: 100px;
 
         >a {
             font-size: 18px;
@@ -292,15 +318,16 @@ section {
         display: none;
     }
 
-    .img-top[_ngcontent-ng-c3516210010] {
+    .img-top {
         width: 500px;
         height: 500px;
         left: -70px;
+        top: 40px;
     }
 
     .img-bottom {
         left: 0;
-        top: -60px;
+        top: -20px;
     }
 
     .background_atf {
@@ -371,11 +398,14 @@ section {
     }
 
     .img-top {
-        top: 60px;
+        top: 100px;
+        width: 400px;
+        height: 400px;
+        left: -60px;
     }
 
     .img-bottom {
         width: 300px;
-        top: 0;
+        top: 50px;
     }
 }

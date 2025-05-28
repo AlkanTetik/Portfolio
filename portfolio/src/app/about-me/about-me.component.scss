@@ -1,8 +1,6 @@
 :host {
     position: static;
-    /* Standard, kann auch ganz weg */
     display: block;
-    /* sorgt dafür, dass dein Component-Root Platz im Layout einnimmt */
 }
 
 section {
@@ -13,12 +11,13 @@ section {
     justify-content: space-between;
     position: relative;
     gap: 10px;
-    padding-top: 200px;
+    padding-top: 20px;
     padding-bottom: 200px;
+    color: white;
+    z-index: 2;
+
 
     >div {
-        z-index: 1;
-
         >div {
             >h1 {
                 z-index: 5;
@@ -31,16 +30,36 @@ section {
     }
 }
 
+.fade-left {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(80px);
+    transition: all 0.8s ease-out;
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 .info_title {
     color: white;
     padding-left: 100px;
     display: flex;
     padding-top: 20px;
+    padding-right: 20px;
 }
 
 .info_content {
     color: white;
     padding-left: 100px;
+    padding-right: 20px;
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -53,16 +72,42 @@ section {
     }
 }
 
+.purpleshadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
 .img_abMe {
     display: flex;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 150px;
 
     >.faceself {
         height: 650px;
         position: absolute;
         right: 340px;
     }
+}
+
+.buttons_atf {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 100px;
+}
+
+.hover_image {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.email_text {
+    cursor: pointer;
 }
 
 @media (max-width: 1350px) {
@@ -79,7 +124,7 @@ section {
     .img_abMe {
         display: flex;
         align-items: center;
-        padding-top: 70px;
+        padding-top: 220px;
 
         >.faceself {
             height: 500px;
@@ -102,29 +147,37 @@ section {
     section {
         justify-content: center;
 
-        >div {
-            padding-left: 20px;
+        // >div {
+        //     padding-left: 20px;
 
-            >div {
-                padding-left: 20px;
+        >h1 {
+            font-size: 70px;
+            padding-left: 0;
 
-                >h1 {
-                    font-size: 70px;
-                    padding-left: 0;
-                }
-            }
         }
     }
 
     .img_abMe {
         display: none;
     }
+
+    section>div>div>h1 {
+        padding-left: 20px;
+    }
+
+    .info_title {
+        padding-left: 20px;
+    }
+
+    .info_content {
+        padding-left: 20px;
+    }
 }
 
 @media (max-width: 550px) {
     section {
         font-size: 14px;
-        padding-top: 100px;
+        padding-top: 0;
         padding-bottom: 150px;
 
         >div {
@@ -135,6 +188,10 @@ section {
                 }
             }
         }
+    }
+
+    .email_text {
+        display: none;
     }
 }
 

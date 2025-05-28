@@ -10,6 +10,12 @@ section {
   background-color: #141D2F;
   display: flex;
   justify-content: space-between;
+  transition: all 0.8s ease-in-out;
+  transform: translateY(-80px);
+
+  &.in-view {
+    transform: translateY(0);
+  }
 }
 
 h1 {
@@ -17,6 +23,12 @@ h1 {
   justify-content: flex-end;
   font-size: 90px;
   font-weight: 700;
+}
+
+.shadow-left {
+  position: absolute;
+  top: 80px;
+  left: 0;
 }
 
 @keyframes popUpDown {
@@ -80,12 +92,14 @@ h1 {
   align-items: flex-end;
   gap: 25px;
   padding: 0 100px;
+  z-index: 1;
 }
 
 .skills_title_img {
   display: flex;
   align-items: center;
   gap: 20px;
+  z-index: 1;
 }
 
 .skills_title_img h1 {
@@ -93,6 +107,7 @@ h1 {
   font-size: 90px;
   font-weight: 700;
   color: white;
+  z-index: 1;
 }
 
 .skills_title_text {
@@ -134,30 +149,57 @@ h1 {
 .vectorsmall {
   position: absolute;
   right: 0;
+  z-index: 1;
 }
 
-.image-switch {
+.hover-wrapper {
   position: relative;
+  display: inline-block;
+
+  .base-image {
+    width: 90px;
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  .hover-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .main-hover-image {
+    width: 90px;
+    display: block;
+  }
+
+  .badge-image {
+    position: absolute;
+    top: 10px; // Position nach Bedarf anpassen
+    top: -100px; // Position nach Bedarf anpassen
+    width: 200px; // Größe der Bubble
+    height: 140px;
+    z-index: 2;
+  }
+
+  &:hover {
+    .base-image {
+      opacity: 0;
+    }
+
+    .hover-images {
+      opacity: 1;
+      pointer-events: auto;
+      width: 70px;
+    }
+  }
 }
 
-.image-switch img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.2s ease-in;
-}
-
-.hover-img {
-  opacity: 0;
-}
-
-.image-switch:hover .hover-img {
-  opacity: 1;
-}
-
-.image-switch:hover .default-img {
-  opacity: 0;
-}
 
 @media (max-width: 1350px) {
   .skills_title_img h1 {
@@ -195,6 +237,31 @@ h1 {
 
   .allImages {
     width: 70px;
+  }
+
+  .main-hover-image {
+    width: 75px;
+    display: block;
+  }
+
+  .hover-wrapper .base-image {
+    width: 75px;
+  }
+
+  .hover-wrapper .badge-image {
+    top: -70px;
+    left: 0px;
+    width: 150px;
+    height: 100px;
+    z-index: 2;
+  }
+
+  .hover-wrapper .main-hover-image {
+    width: 75px;
+  }
+
+  .hover-wrapper .hover-images {
+    width: 75px;
   }
 
   .skills_looking_respponsive {
@@ -238,10 +305,12 @@ h1 {
   .skills_title_img h1 {
     font-size: 50px;
     padding-right: 80px;
+    z-index: 1;
   }
 
   .skills_title {
     padding: 0;
+    z-index: 1;
   }
 
   .skills_looking_text {
@@ -278,10 +347,31 @@ h1 {
   .skills_title_text_1 {
     font-size: 14px;
     padding-right: 45px;
+    padding-left: 45px;
   }
 
   .allImages {
     width: 55px;
+  }
+
+  .hover-wrapper .base-image {
+    width: 58px;
+  }
+
+  .hover-wrapper .badge-image {
+    top: -60px;
+    left: 0px;
+    width: 115px;
+    height: 75px;
+    z-index: 2;
+  }
+
+  .hover-wrapper .main-hover-image {
+    width: 58px;
+  }
+
+  .hover-wrapper .hover-images {
+    width: 58px;
   }
 
   .skills_looking_respponsive {
@@ -294,7 +384,6 @@ h1 {
     font-size: 15px;
 
     &:hover {
-      // transform: scaleX(1.05) scaleY(1.05);
       padding: 12px 24px;
     }
   }
@@ -317,6 +406,7 @@ h1 {
   .skills_title_text_1 {
     font-size: 11px;
     padding-right: 25px;
+    padding-left: 25px;
   }
 
   .skills_title_text_responsive {

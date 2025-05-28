@@ -1,26 +1,5 @@
 <section class="testimonial-container">
-    <div class="quote-mark">“</div>
-
-    <div class="testimonial-boxcircle">
-        <div class="testimonial-box">
-            <p class="quote-text">
-                {{ testimonials[currentIndex].quote }}
-            </p>
-            <div>
-                <hr class="divider" />
-                <p class="author">
-                    {{ testimonials[currentIndex].name }} - {{ testimonials[currentIndex].role }}
-                </p>
-            </div>
-        </div>
-
-        <div class="image-circle">
-            <img [src]="testimonials[currentIndex].image" alt="Photo">
-        </div>
-    </div>
-    <img class="testimonialshadow" src="../../assets/testimonialshadow.png" alt="">
-
-    <div id="contact" class="controls">
+    <div id="contact" class="controls fade-left">
         <button (click)="prev()"><img src="../../assets/greenarrow.png" alt=""></button>
         <div class="dots">
             <span *ngFor="let t of testimonials; let i = index" [class.active]="i === currentIndex"
@@ -29,5 +8,25 @@
         <button (click)="next()"><img style="transform: rotate(180deg);" src="../../assets/greenarrow.png"
                 alt=""></button>
     </div>
+    <div class="testimonial-content fade-right">
+        <div class="testimonial-boxcircle">
+            <div class="testimonial-box">
+                <div class="quote-mark">“</div>
+                <p class="quote-text">
+                    {{ testimonials[currentIndex].quote }}
+                </p>
+                <div>
+                    <hr class="divider" />
+                    <p class="author">
+                        {{ testimonials[currentIndex].name }} - {{ testimonials[currentIndex].role }}
+                    </p>
+                </div>
+            </div>
 
+            <div class="image-circle">
+                <img [src]="testimonials[currentIndex].image" alt="Photo">
+            </div>
+        </div>
+    </div>
+     <img class="testimonialshadow" src="../../assets/testimonialshadow.png" alt="">
 </section>
