@@ -16,6 +16,7 @@
     opacity: 0;
     transform: translateX(-80px);
     transition: all 0.8s ease-out;
+    z-index: 2;
 
     &.in-view {
         opacity: 1;
@@ -27,6 +28,7 @@
     opacity: 0;
     transform: translateY(80px);
     transition: all 0.8s ease-out;
+    z-index: 2;
 
     &.in-view {
         opacity: 1;

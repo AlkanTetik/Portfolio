@@ -19,7 +19,7 @@ export class AboveTheFoldComponent implements AfterViewInit {
   }
 
   checkScroll() {
-    const fadeElems = this.el.nativeElement.querySelectorAll('.fade-left, .fade-right');
+    const fadeElems = this.el.nativeElement.querySelectorAll('.fade-left');
     fadeElems.forEach((elem: HTMLElement) => {
       const rect = elem.getBoundingClientRect();
       const windowHeight = window.innerHeight;

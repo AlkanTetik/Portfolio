@@ -19,16 +19,7 @@ section {
     opacity: 0;
     transform: translateX(-80px);
     transition: all 0.6s ease-out;
-    &.in-view {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
-.fade-right {
-    opacity: 0;
-    transform: translateX(80px);
-    transition: all 0.6s ease-out;
     &.in-view {
         opacity: 1;
         transform: translateX(0);
@@ -136,14 +127,35 @@ section {
 }
 
 .scroll_down_text {
-    transform: rotate(90deg);
-    z-index: 1;
+    transform: rotate(90deg) translateX(10px);
     position: absolute;
     right: 100px;
     top: 900px;
     font-size: 25px;
     z-index: 3;
+    transition: all 0.3s ease-in-out;
+
+    animation: float 2s ease-in-out infinite; // ✅ hier ist die Schwebebewegung
+
+    &.in-view {
+        transform: rotate(90deg) translateX(0);
+    }
 }
+
+@keyframes float {
+    0% {
+        transform: rotate(90deg) translateY(40px) translateX(0);
+    }
+
+    50% {
+        transform: rotate(90deg) translateY(20px) translateX(-10px);
+    }
+
+    100% {
+        transform: rotate(90deg) translateY(40px) translateX(0);
+    }
+}
+
 
 .buttons_atf {
     position: absolute;
