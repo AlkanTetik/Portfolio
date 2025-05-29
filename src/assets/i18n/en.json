@@ -1,0 +1,85 @@
+{
+  "NAV": {
+    "ABOUT_ME": "About me",
+    "SKILLS": "Skills",
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Contact"
+  },
+  "ABOVE": {
+    "I_AM": "I am",
+    "NAME": "Alkan Tetik",
+    "ROLE": "FRONTEND DEVELOPER",
+    "CTA": "Let's talk!",
+    "SCROLL": "Scroll down"
+  },
+  "ABOUT": {
+    "TITLE": "About me",
+    "INTRO": "Hi, I'm Alkan, 21 years old and a German-, Turkish and English-speaking frontend developer from Vienna. Motivated by the limitless possibilities in IT, I am passionate about creating visually appealing and intuitive websites and applications.",
+    "LOCATION": "I am flexible in terms of my working environment, so I can work effectively both on site in the office in Vienna and remotely.",
+    "MOTIVATION": "I am open to new tasks and am always looking for new challenges to consolidate and constantly expand my knowledge and skills.",
+    "CREATIVE": "In my job, programming isn't just about writing code; it's a creative form of problem solving. I pride myself on my ability to distill complex technical challenges into simple, user-friendly solutions. In this way, I help you achieve your goals and bring your visions to life."
+  },
+  "SKILLS": {
+    "GET_IN_TOUCH": "Get in touch",
+    "LOOKING_FOR": "Looking for",
+    "ANOTHER_SKILL": "another skill",
+    "ENTHUSIASM_FOR_LEARNING": "Reveal enthusiasm for learning new technologies and frameworks.",
+    "MY_SKILLS": "My skills",
+    "DESCRIPTION": "Along the way, I have worked on various projects, learning and successfully utilizing a range of front-end technologies and concepts. I am open to new technologies and methodologies to continuously improve my skills and stay ahead in the ever-evolving landscape of web development.",
+    "CONTACT_ME": "Please feel free to contact me. I look forward to expanding my existing knowledge."
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "SUBLINE": "Explore a selection of my work here – interact with projects to see my skills in action.",
+    "BUTTONS": {
+      "LIVE": "Live Test",
+      "GITHUB": "GitHub"
+    },
+    "JOIN": {
+      "TITLE": "Join",
+      "TECH": "JavaScript | HTML | CSS | Firebase",
+      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "POLLO": {
+      "TITLE": "El Pollo Loco",
+      "TECH": "JavaScript | HTML | CSS",
+      "DESCRIPTION": "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale."
+    },
+    "POKEDEX": {
+      "TITLE": "Pokedex",
+      "TECH": "JavaScript | HTML | CSS | API",
+      "DESCRIPTION": "Based on the PokéAPI, a simple library that provides and catalogues Pokémon information."
+    }
+  },
+  "TESTIMONIALS": [
+    {
+      "QUOTE": "Alkan really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+      "NAME": "V. Schuster",
+      "ROLE": "Team Partner"
+    },
+    {
+      "QUOTE": "Alkan always brought fresh ideas to the table and helped us overcome tough challenges. His creativity really made a difference in the project.",
+      "NAME": "Robert",
+      "ROLE": "Design Lead"
+    },
+    {
+      "QUOTE": "Alkan was incredibly reliable and technically strong. He solved issues before they even became problems. A true asset to the team.",
+      "NAME": "Hasan",
+      "ROLE": "Frontend Developer"
+    }
+  ],
+  "CONTACT": {
+    "TITLE": "Contact",
+    "QUESTION": "Got a Problem to solve?",
+    "DESCRIPTION": "Get in touch with me through this form. I am interested in hearing from you,<br>getting to know your ideas, and contributing to your projects with my work.",
+    "CALL": "Need a Frontend developer? Contact me!",
+    "PLACEHOLDER_NAME": "Your name",
+    "PLACEHOLDER_EMAIL": "Your email",
+    "PLACEHOLDER_MESSAGE": "Your message",
+    "VALIDATION_MESSAGE": "Message is required",
+    "PRIVACY_TEXT": "I've read the",
+    "PRIVACY_LINK": "privacy policy",
+    "PRIVACY_REST": "and agree to the processing of my data as described.",
+    "BUTTON": "Send Message :)"
+  }
+}

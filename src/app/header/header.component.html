@@ -1,0 +1,35 @@
+<section class="navbar-section">
+  <div class="nav_name">
+    <p>A</p>
+    <p>l</p>
+    <p>k</p>
+    <p>a</p>
+    <p style="color: #9747FF;">n</p><br>
+    <p style="padding-left: 10px;">T</p>
+    <p>e</p>
+    <p>t</p>
+    <p>i</p>
+    <p style="color: #70E61C;">k</p>
+  </div>
+
+  <button class="menu-toggle" (click)="toggleMenu()"><img src="../../assets/burgermenu.png" alt=""></button>
+
+  <div class="navbar" [class.open]="isMenuOpen">
+    <div>
+      <a href="#aboutme" (click)="closeMenu()">{{ 'NAV.ABOUT_ME' | translate }}</a>
+      <a href="#skills" (click)="closeMenu()">{{ 'NAV.SKILLS' | translate }}</a>
+      <a href="#portfolio" (click)="closeMenu()">{{ 'NAV.PORTFOLIO' | translate }}</a>
+      <a href="#contact" class="nav_contact" (click)="closeMenu()">{{ 'NAV.CONTACT' | translate }}</a>
+    </div>
+    <div class="navbar_translation">
+      <button (click)="setActive('de')" [ngClass]="{ 'active': currentLang === 'de' }">
+        DE
+      </button>
+
+      <button (click)="setActive('en')" [ngClass]="{ 'active': currentLang === 'en' }">
+        EN
+      </button>
+
+    </div>
+  </div>
+</section>

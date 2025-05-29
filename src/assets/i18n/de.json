@@ -1,0 +1,85 @@
+{
+  "NAV": {
+    "ABOUT_ME": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Kontakt"
+  },
+  "ABOVE": {
+    "I_AM": "Ich bin",
+    "NAME": "Alkan Tetik",
+    "ROLE": "FRONTEND-ENTWICKLER",
+    "CTA": "Lass uns sprechen!",
+    "SCROLL": "Runterscrollen"
+  },
+  "ABOUT": {
+    "TITLE": "Über mich",
+    "INTRO": "Hallo, ich bin Alkan, 21 Jahre alt und ein deutsch-, türkisch- und englischsprachiger Frontend-Entwickler aus Wien. Begeistert von den grenzenlosen Möglichkeiten der IT, liebe ich es, visuell ansprechende und intuitive Websites und Anwendungen zu erstellen.",
+    "LOCATION": "Ich bin flexibel in Bezug auf meine Arbeitsumgebung und kann sowohl vor Ort im Büro in Wien als auch remote effektiv arbeiten.",
+    "MOTIVATION": "Ich bin offen für neue Aufgaben und stets auf der Suche nach neuen Herausforderungen, um mein Wissen und meine Fähigkeiten zu festigen und kontinuierlich auszubauen.",
+    "CREATIVE": "In meinem Beruf geht es beim Programmieren nicht nur ums Schreiben von Code – es ist eine kreative Form der Problemlösung. Ich bin stolz darauf, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzuwandeln. So helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+  },
+  "SKILLS": {
+    "GET_IN_TOUCH": "Kontakt aufnehmen",
+    "LOOKING_FOR": "Suchst du nach",
+    "ANOTHER_SKILL": "einer anderen Fähigkeit",
+    "ENTHUSIASM_FOR_LEARNING": "Ich bin begeistert, neue Technologien und Frameworks zu erlernen.",
+    "MY_SKILLS": "Meine Skills",
+    "DESCRIPTION": "Im Laufe meiner Projekte habe ich verschiedene Frontend-Technologien kennengelernt und erfolgreich eingesetzt. Ich bin offen für neue Technologien und Methoden, um meine Fähigkeiten stetig zu verbessern und mit der sich ständig weiterentwickelnden Webentwicklung Schritt zu halten.",
+    "CONTACT_ME": "Kontaktiere mich gerne. Ich freue mich darauf, mein Wissen weiter auszubauen."
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "SUBLINE": "Hier findest du eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "BUTTONS": {
+      "LIVE": "Live Test",
+      "GITHUB": "GitHub"
+    },
+    "JOIN": {
+      "TITLE": "Join",
+      "TECH": "JavaScript | HTML | CSS | Firebase",
+      "DESCRIPTION": "Auf dem Kanban-System basierender Task-Manager. Aufgaben per Drag-and-Drop erstellen, organisieren, Benutzer und Kategorien zuweisen."
+    },
+    "POLLO": {
+      "TITLE": "El Pollo Loco",
+      "TECH": "JavaScript | HTML | CSS",
+      "DESCRIPTION": "Ein einfaches Jump-and-Run-Spiel basierend auf objektorientierter Programmierung. Hilf Sharkie Münzen und Giftflaschen zu finden, um den Killerwal zu besiegen."
+    },
+    "POKEDEX": {
+      "TITLE": "Pokedex",
+      "TECH": "JavaScript | HTML | CSS | API",
+      "DESCRIPTION": "Basierend auf der PokéAPI, einer einfachen Bibliothek zur Bereitstellung und Katalogisierung von Pokémon-Informationen."
+    }
+  },
+  "TESTIMONIALS": [
+    {
+      "QUOTE": "Alkan hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+      "NAME": "V. Schuster",
+      "ROLE": "Teampartner"
+    },
+    {
+      "QUOTE": "Alkan brachte immer frische Ideen ein und half uns, schwierige Herausforderungen zu meistern. Seine Kreativität hat das Projekt entscheidend geprägt.",
+      "NAME": "Robert",
+      "ROLE": "Design Lead"
+    },
+    {
+      "QUOTE": "Alkan war unglaublich zuverlässig und technisch stark. Er löste Probleme, bevor sie überhaupt auftraten. Eine echte Bereicherung für das Team.",
+      "NAME": "Hasan",
+      "ROLE": "Frontend Entwickler"
+    }
+  ],
+  "CONTACT": {
+    "TITLE": "Kontakt",
+    "QUESTION": "Ein Problem zu lösen?",
+    "DESCRIPTION": "Kontaktiere mich über dieses Formular. Ich freue mich, von dir zu hören,<br>deine Ideen kennenzulernen und mit meiner Arbeit zu deinem Projekt beizutragen.",
+    "CALL": "Brauchst du einen Frontend-Entwickler? Kontaktiere mich!",
+    "PLACEHOLDER_NAME": "Dein Name",
+    "PLACEHOLDER_EMAIL": "Deine E-Mail",
+    "PLACEHOLDER_MESSAGE": "Deine Nachricht",
+    "VALIDATION_MESSAGE": "Nachricht ist erforderlich",
+    "PRIVACY_TEXT": "Ich habe die",
+    "PRIVACY_LINK": "Datenschutzerklärung",
+    "PRIVACY_REST": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+    "BUTTON": "Nachricht senden :)"
+  }
+}
