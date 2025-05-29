@@ -67,6 +67,7 @@ section {
         border-color: #9747FF;
         border-radius: 10px;
         padding: 10px 20px;
+        color: white;
 
         &::placeholder {
             color: white;
@@ -78,7 +79,7 @@ section {
         border-color: #70E61C;
         outline: none;
         box-shadow: 0 0 5px #70E61C;
-        /* optional: Glow-Effekt */
+        background-color: #1A2235;
     }
 
     form {
@@ -87,6 +88,17 @@ section {
         justify-content: center;
         gap: 30px;
         z-index: 2;
+    }
+
+    input:-webkit-autofill,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0px 1000px #141D2F inset !important;
+        -webkit-text-fill-color: white !important;
+        caret-color: white;
+        transition: background-color 5000s ease-in-out 0s;
+        color: white;
     }
 
     button[type=submit] {
@@ -105,6 +117,14 @@ section {
             background-color: #9747FF;
         }
     }
+
+    button[type=submit]:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        transform: none;
+        background-color: gray;
+    }
+
 
     .contactshadow {
         height: 650px;
@@ -127,7 +147,7 @@ section {
     }
 
     .labelprivacy {
-        margin: 1rem 0;
+        margin: 1rem 5px;
         display: flex;
         justify-content: flex-start;
         z-index: 1;
@@ -217,6 +237,7 @@ section {
     section input[type=text],
     section textarea {
         padding: 5px 10px;
+        color: white;
     }
 
     section button[type=submit] {

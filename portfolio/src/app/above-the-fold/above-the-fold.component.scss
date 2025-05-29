@@ -82,9 +82,10 @@ section {
 }
 
 .name_atf {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-left: 40px;
 }
 
 .name_whoWhat {
@@ -95,24 +96,29 @@ section {
 }
 
 .name_iam {
-    transform: rotate(-90deg);
-    line-height: 120%;
-    font-size: 64px;
-    letter-spacing: 0%;
-    width: 152px;
-    height: 63px;
-    padding-left: 20px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 63px;
+  font-weight: 300;
+  color: white;
+}
+
+.name_texts {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
 }
 
 .name {
-    font-size: 90px;
-    font-weight: 700;
+  font-size: 90px;
+  font-weight: 700;
+  color: white;
 }
 
 .frontendDev {
-    color: #9747FF;
-    font-size: 58px;
-    font-weight: 400;
+  font-size: 58px;
+  font-weight: 400;
+  color: #9747FF;
 }
 
 .background_atf {
@@ -225,12 +231,8 @@ section {
     }
 
     .name_iam {
-        font-size: 50px;
-        transform: rotate(-90deg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0;
+        font-size: 55px;
+        transform: rotate(180deg);
     }
 
     .scroll_down_text {
@@ -272,8 +274,6 @@ section {
 
     .name_iam {
         font-size: 40px;
-        padding-top: 50px;
-        padding-left: 10px;
     }
 
     .scroll_down_text {
@@ -344,6 +344,10 @@ section {
 
     .background_atf {
         top: 400px;
+    }
+
+    .name_atf {
+        margin-left: 0;
     }
 
     .name_content {

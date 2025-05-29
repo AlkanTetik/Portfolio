@@ -8,19 +8,35 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
-    RouterOutlet, AboveTheFoldComponent,
-    HeaderComponent, AboutMeComponent,
-    MySkillsComponent, PortfolioComponent,
-    TestimonialComponent, ContactFormComponent,
-    FooterComponent],
+    RouterOutlet,
+    AboveTheFoldComponent,
+    HeaderComponent,
+    AboutMeComponent,
+    MySkillsComponent,
+    PortfolioComponent,
+    TestimonialComponent,
+    ContactFormComponent,
+    FooterComponent,
+    TranslateModule
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'portfolio';
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+    this.translate.use('en');
+  }
+
+  switchLang(lang: string) {
+    this.translate.use(lang);
+  }
 }

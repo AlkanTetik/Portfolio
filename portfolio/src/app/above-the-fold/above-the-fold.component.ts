@@ -1,11 +1,14 @@
 import { AfterViewInit, Component, ElementRef, HostListener } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-above-the-fold',
-  imports: [],
+  standalone: true,
+  imports: [TranslateModule],
   templateUrl: './above-the-fold.component.html',
-  styleUrl: './above-the-fold.component.scss'
+  styleUrls: ['./above-the-fold.component.scss'] // ✅ siehe nächster Punkt
 })
+
 export class AboveTheFoldComponent implements AfterViewInit {
   constructor(private el: ElementRef) {}
 

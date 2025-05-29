@@ -269,8 +269,7 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding: 40px 20px;
     z-index: 1;
   }
 
@@ -297,6 +296,12 @@ h1 {
     &:hover {
       padding: 12px 24px;
     }
+  }
+
+  .skills_title_text_1,
+  .skills_looking,
+  .skills_title_text_responsive {
+    text-align: center;
   }
 
 }
