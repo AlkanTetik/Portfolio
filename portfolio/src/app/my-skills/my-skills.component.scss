@@ -384,6 +384,13 @@ h1 {
     padding-top: 20px;
   }
 
+  .shadow-left {
+    top: 200px;
+    >.greenshadow {
+      width: 200px;
+    }
+  }
+
   .contactButton {
     padding: 10px 20px;
     font-size: 15px;

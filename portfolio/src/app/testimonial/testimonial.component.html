@@ -8,7 +8,7 @@
         <button (click)="next()"><img style="transform: rotate(180deg);" src="../../assets/greenarrow.png"
                 alt=""></button>
     </div>
-    <div class="testimonial-content fade-right">
+    <div class="testimonial-content fade-right" *ngIf="testimonials?.[currentIndex]">
         <div class="testimonial-boxcircle">
             <div class="testimonial-box">
                 <div class="quote-mark">“</div>
@@ -28,5 +28,6 @@
             </div>
         </div>
     </div>
-     <img class="testimonialshadow" src="../../assets/testimonialshadow.png" alt="">
+
+    <img class="testimonialshadow" src="../../assets/testimonialshadow.png" alt="">
 </section>
