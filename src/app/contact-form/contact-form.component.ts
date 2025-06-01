@@ -44,21 +44,20 @@ export class ContactFormComponent implements AfterViewInit {
   }
 
   isDisabled = true;
-  mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://alkan-tetik.at/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
+        'Content-Type': 'application/json'
       },
+      responseType: 'text' as const
     },
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
@@ -70,9 +69,6 @@ export class ContactFormComponent implements AfterViewInit {
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
-      ngForm.resetForm();
     }
   }
 }
