@@ -81,5 +81,6 @@
     "PRIVACY_LINK": "privacy policy",
     "PRIVACY_REST": "and agree to the processing of my data as described.",
     "BUTTON": "Send Message :)"
-  }
+  },
+  "LEGAL_NOTICE": "Legal Notice"
 }

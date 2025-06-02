@@ -34,9 +34,11 @@ section {
 
 .img-bottom {
     position: absolute;
-    top: -150px;
-    left: 100px;
-    width: 450px;
+    top: -300px;
+    left: 0px;
+    width: 750px;
+    z-index: 1;
+    border-radius: 50px;
 }
 
 .img-top {
@@ -45,11 +47,6 @@ section {
     left: 0;
     width: 700px;
     height: 700px;
-}
-
-.img-bottom {
-    z-index: 1;
-    border-radius: 50px;
 }
 
 .name_content {
@@ -82,10 +79,10 @@ section {
 }
 
 .name_atf {
-  display: flex;
-  align-items: center;
-  gap: 10px; 
-  margin-left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 40px;
 }
 
 .name_whoWhat {
@@ -96,36 +93,35 @@ section {
 }
 
 .name_iam {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  font-size: 63px;
-  font-weight: 300;
-  color: white;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 63px;
+    font-weight: 300;
+    color: white;
 }
 
 .name_texts {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
 }
 
 .name {
-  font-size: 90px;
-  font-weight: 700;
-  color: white;
+    font-size: 90px;
+    font-weight: 700;
+    color: white;
 }
 
 .frontendDev {
-  font-size: 58px;
-  font-weight: 400;
-  color: #9747FF;
+    font-size: 58px;
+    font-weight: 400;
+    color: #9747FF;
 }
 
 .background_atf {
-    height: 600px;
+    height: 400px;
     width: 100vw;
     position: absolute;
-    top: 550px;
     left: 0;
     right: 0;
     bottom: 0;
@@ -216,8 +212,7 @@ section {
     }
 
     .img-bottom {
-        width: 350px;
-        top: -70px;
+        width: 650px;
     }
 
     .name_content {
@@ -258,10 +253,6 @@ section {
         height: 500px;
     }
 
-    .img-bottom {
-        width: 350px;
-    }
-
     .name_content {
         font-size: 40px;
         z-index: 1;
@@ -297,7 +288,8 @@ section {
     }
 
     .img-bottom {
-        width: 350px;
+        width: 600px;
+        top: -250px;
     }
 
     .name_content {
@@ -338,12 +330,12 @@ section {
     }
 
     .img-bottom {
-        left: 0;
-        top: -20px;
+        left: -100px;
     }
 
     .background_atf {
-        top: 400px;
+        top: 350px;
+        height: 600px;
     }
 
     .name_atf {
@@ -351,7 +343,7 @@ section {
     }
 
     .name_content {
-        margin-top: 150px;
+        padding-top: 50px;
     }
 
     .name_iam {
@@ -372,10 +364,6 @@ section {
         font-size: 28px;
     }
 
-    .name_content {
-        margin-top: 150px;
-    }
-
     .name_iam {
         padding-top: 35px;
         font-size: 35px;
@@ -383,6 +371,21 @@ section {
 
     .email_text {
         display: none;
+    }
+
+    .img-bottom {
+        width: 550px;
+        top: -250px;
+    }
+
+    .img-top {
+        left: -100px;
+        top: -40px;
+    }
+
+    .background_atf {
+        top: 350px;
+        height: 400px;
     }
 }
 
@@ -393,10 +396,6 @@ section {
 
     .frontendDev {
         font-size: 18px;
-    }
-
-    .name_content {
-        margin-top: 150px;
     }
 
     .name_iam {
@@ -414,14 +413,30 @@ section {
     }
 
     .img-top {
-        top: 100px;
         width: 400px;
-        height: 400px;
-        left: -60px;
+        height: 350px;
+        top: 20px;
+        left: -40px;
     }
 
     .img-bottom {
-        width: 300px;
-        top: 50px;
+        width: 550px;
+        top: -180px;
+    }
+}
+
+@media (max-width: 380px) {
+    .img-top {
+        width: 400px;
+        height: 400px;
+        left: -50px;
+    }
+
+    .img-bottom {
+        width: 550px;
+    }
+
+    .name_content {
+        padding-top: 80px;
     }
 }

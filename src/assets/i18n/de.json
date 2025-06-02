@@ -81,5 +81,6 @@
     "PRIVACY_LINK": "Datenschutzerklärung",
     "PRIVACY_REST": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
     "BUTTON": "Nachricht senden :)"
-  }
+  },
+  "LEGAL_NOTICE": "Impressum"
 }
