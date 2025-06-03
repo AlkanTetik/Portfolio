@@ -5,10 +5,26 @@ section {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+    font-size: 15px;
 }
 
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
     background-color: #141D2F;
+}
+
+@media (max-width: 850px) {
+    section {
+        padding: 40px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        padding: 20px 10px;
+        font-size: 11px;
+    }
+    
 }
