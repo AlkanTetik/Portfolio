@@ -3,6 +3,8 @@ section {
     background-color: #141D2F;
     padding-top: 50px;
     padding-bottom: 50px;
+    max-width: 1920px;
+    margin: 0 auto;
 
     >div {
         display: flex;
@@ -89,6 +91,7 @@ section {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    position: relative;
 
     .project-card {
         display: flex;

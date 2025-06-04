@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -10,14 +11,18 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private router: Router) {
     this.translate.setDefaultLang('en');
   }
 
-  openLegalNotice(event: Event) {
-    event.preventDefault(); // verhindert das normale Verhalten des Links
-    const url = window.location.origin + '/imprint'; // localhost oder live Domain dynamisch ermitteln
-    window.open(url, '_blank', 'noopener,noreferrer');
-  }
 
+  openLinkInNewTab(event: MouseEvent, commands: any[]) {
+    event.preventDefault();
+
+    const url = this.router.serializeUrl(
+      this.router.createUrlTree(commands)
+    );
+
+    window.open(url, '_blank');
+  }
 }

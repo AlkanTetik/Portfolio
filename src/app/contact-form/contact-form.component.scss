@@ -6,6 +6,8 @@ section {
     background-color: #141D2F;
     color: white;
     position: relative;
+    max-width: 1920px;
+    margin: 0 auto;
 
     .contact-form {
         display: flex;
@@ -156,6 +158,10 @@ section {
     .privacypolicy {
         font-size: 14px;
     }
+}
+
+#contact {
+    scroll-margin-top: 90px;
 }
 
 .fade-up {

@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" id="contact">
     <div class="contact-header">
         <div class="contact-line"></div>
         <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
@@ -24,16 +24,13 @@
                 placeholder="{{ 'CONTACT.PLACEHOLDER_MESSAGE' | translate }}" style="height:200px" required
                 #message="ngModel"></textarea>
 
-            <p *ngIf="message.invalid && message.touched" class="error">
-                {{ 'CONTACT.VALIDATION_MESSAGE' | translate }}
-            </p>
-
             <label class="labelprivacy">
                 <input type="checkbox" name="privacy" ngModel required
                     style="margin-right: 0.5rem; background-color: transparent; cursor: pointer;" />
                 <div class="privacypolicy">
                     {{ 'CONTACT.PRIVACY_TEXT' | translate }}
-                    <a href="/privacy-policy" target="_blank" style="text-decoration: none; color: #9747FF;">
+                    <a routerLink="['/privacypolicy']" (click)="openLinkInNewTab($event, ['/privacypolicy'])" href="#"
+                        style="text-decoration: none; color: #9747FF;">
                         {{ 'CONTACT.PRIVACY_LINK' | translate }}
                     </a>
                     {{ 'CONTACT.PRIVACY_REST' | translate }}
@@ -43,7 +40,7 @@
             <button type="submit" [disabled]="!contactForm.valid">{{ 'CONTACT.BUTTON'
                 | translate }}</button>
         </form>
-         <img class="contactshadow" src="../../assets/contactshadow.png" alt="" />
+        <img class="contactshadow" src="../../assets/contactshadow.png" alt="" />
     </div>
 
     <a class="fade-up" href="#header">

@@ -5,14 +5,18 @@
 
 section {
     height: 100vh;
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 100px;
     background-color: #141D2F;
     color: white;
     width: 100vw;
     margin: 0;
     padding: 0;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 .fade-left {
@@ -34,7 +38,7 @@ section {
 
 .img-bottom {
     position: absolute;
-    top: -300px;
+    bottom: 0;
     left: 0px;
     width: 750px;
     z-index: 1;
@@ -126,6 +130,8 @@ section {
     right: 0;
     bottom: 0;
     z-index: 1;
+    margin: 0 auto;
+    max-width: 1920px;
 }
 
 .scroll_down_text {
@@ -209,10 +215,12 @@ section {
     .img-top {
         width: 500px;
         height: 500px;
+        left: 35px;
     }
 
     .img-bottom {
-        width: 650px;
+        width: 600px;
+        bottom: -40px;
     }
 
     .name_content {
@@ -289,7 +297,6 @@ section {
 
     .img-bottom {
         width: 600px;
-        top: -250px;
     }
 
     .name_content {
@@ -312,10 +319,11 @@ section {
 
 }
 
-@media (max-width: 985px) {
+@media (max-width: 1020px) {
     section {
         flex-direction: column;
         justify-content: center;
+        gap: 0;
     }
 
     .scroll_down_text {
@@ -330,6 +338,7 @@ section {
     }
 
     .img-bottom {
+        bottom: -80px;
         left: -120px;
     }
 
@@ -360,6 +369,10 @@ section {
         font-size: 50px;
     }
 
+    .name_content {
+        padding-top: 0;
+    }
+
     .frontendDev {
         font-size: 28px;
     }
@@ -374,8 +387,8 @@ section {
     }
 
     .img-bottom {
+         bottom: 0;
         width: 550px;
-        top: -250px;
     }
 
     .img-top {
@@ -384,7 +397,7 @@ section {
     }
 
     .background_atf {
-        top: 350px;
+        top: 300px;
         height: 400px;
     }
 }
@@ -421,7 +434,6 @@ section {
 
     .img-bottom {
         width: 550px;
-        top: -140px;
     }
 }
 
@@ -433,10 +445,11 @@ section {
     }
 
     .img-bottom {
-        width: 550px;
+        width: 500px;
+        left: -95px;
     }
 
     .name_content {
-        padding-top: 80px;
+        padding-top: 0;
     }
 }

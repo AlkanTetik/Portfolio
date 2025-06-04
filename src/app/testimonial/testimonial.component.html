@@ -1,5 +1,5 @@
 <section class="testimonial-container">
-    <div id="contact" class="controls fade-left">
+    <div class="controls fade-left">
         <button (click)="prev()"><img src="../../assets/greenarrow.png" alt=""></button>
         <div class="dots">
             <span *ngFor="let t of testimonials; let i = index" [class.active]="i === currentIndex"

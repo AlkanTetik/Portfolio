@@ -82,5 +82,25 @@
     "PRIVACY_REST": "and agree to the processing of my data as described.",
     "BUTTON": "Send Message :)"
   },
-  "LEGAL_NOTICE": "Legal Notice"
+  "LEGAL_NOTICE": "Legal Notice",
+  "IMPRINT": {
+    "TITLE": "Legal Notice",
+    "LEGAL_INFO": "Information and disclosure according to §5 (1) ECG, §25 MedienG, §63 GewO and §14 UGB",
+    "SITE_OPERATOR": "Website Operator",
+    "ADDRESS": "Address",
+    "UID": "UID Number",
+    "TRADE_SUPERVISORY_AUTHORITY": "Trade Supervisory Authority",
+    "MEMBERSHIPS": "Memberships",
+    "CONTACT": "Contact Information",
+    "APPLICABLE_LAWS": "Applicable Legislation",
+    "PROFESSIONAL_TITLE": "Professional Title",
+    "ONLINE_DISPUTE_RESOLUTION_TITLE": "Online Dispute Resolution",
+    "ONLINE_DISPUTE_RESOLUTION_TEXT": "Consumers domiciled in Austria or in another contracting state of the ODR Regulation have the possibility to resolve problems concerning the purchase of goods or services for payment through an online dispute resolution platform (according to OS, AStG). The European Commission provides a platform for this purpose: https://ec.europa.eu/consumers/odr",
+    "COPYRIGHT_TITLE": "Copyright",
+    "COPYRIGHT_TEXT": "The contents of this website are subject to various protective rights (e.g. copyright) to the extent legally possible. Any use/distribution of provided material that is prohibited by copyright law requires the written consent of the website operator.",
+    "LIABILITY_EXCLUSION_TITLE": "Disclaimer",
+    "LIABILITY_EXCLUSION_TEXT": "Despite careful content control, the website operator assumes no liability for the content of external links. The operators of the linked pages are solely responsible for their content. Should you still become aware of outgoing links pointing to a website with illegal activity/information, please notify us so that we can remove them immediately in accordance with § 17 para. 2 ECG. The copyrights of third parties are observed with the utmost care by the website operator. Should you nevertheless become aware of a copyright infringement, please notify us accordingly. Upon becoming aware of such legal violations, we will immediately remove the affected content.",
+    "SOURCE": "Source",
+    "SOURCE_LINK_TEXT": "Imprint Generator Austria"
+  }
 }

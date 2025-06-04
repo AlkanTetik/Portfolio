@@ -3,12 +3,22 @@
   justify-content: space-between;
   align-items: center;
   background: #141D2F;
-  padding: 30px 80px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 4;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #141D2F;
+  padding: 20px 80px;
 }
 
 .menu-toggle {
@@ -42,7 +52,7 @@
     display: flex;
   }
 
-  > div {
+  >div {
     display: flex;
     gap: 20px;
     align-items: center;
@@ -96,11 +106,15 @@
 
 @media (max-width: 1150px) {
   .navbar-section {
-    padding: 30px 50px;
+    padding: 20px 50px;
   }
 
   .navbar .navbar_translation {
     margin-left: 0;
+  }
+
+  .navbar-container {
+    padding: 0 0;
   }
 }
 
@@ -120,7 +134,7 @@
     display: none;
     justify-content: center;
 
-    > div {
+    >div {
       flex-direction: column;
       align-items: center;
       justify-content: center;

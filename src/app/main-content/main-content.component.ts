@@ -7,10 +7,11 @@ import { PortfolioComponent } from "../portfolio/portfolio.component";
 import { TestimonialComponent } from "../testimonial/testimonial.component";
 import { ContactFormComponent } from "../contact-form/contact-form.component";
 import { FooterComponent } from "../footer/footer.component";
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-main-content',
-  imports: [HeaderComponent, AboveTheFoldComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, TestimonialComponent, ContactFormComponent, FooterComponent],
+  imports: [HeaderComponent, AboveTheFoldComponent, AboutMeComponent, MySkillsComponent, PortfolioComponent, TestimonialComponent, ContactFormComponent, TranslateModule],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

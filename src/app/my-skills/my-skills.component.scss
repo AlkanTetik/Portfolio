@@ -12,11 +12,18 @@ section {
   justify-content: space-between;
   transition: all 0.8s ease-in-out;
   transform: translateY(-80px);
+  max-width: 1920px;
+  margin: 0 auto;
 
   &.in-view {
     transform: translateY(0);
   }
 }
+
+#skills {
+  scroll-margin-top: 250px; // Passe das an deine Header-Höhe an
+}
+
 
 h1 {
   display: flex;
@@ -304,6 +311,10 @@ h1 {
     text-align: center;
   }
 
+  #skills {
+    scroll-margin-top: 50px;
+  }
+
 }
 
 @media (max-width: 550px) {
@@ -386,6 +397,7 @@ h1 {
 
   .shadow-left {
     top: 200px;
+
     >.greenshadow {
       width: 200px;
     }

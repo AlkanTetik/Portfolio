@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, HostListener, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -12,10 +13,20 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent implements AfterViewInit {
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef, private router: Router) { }
 
   ngAfterViewInit() {
     this.checkScroll();
+  }
+
+  openLinkInNewTab(event: MouseEvent, commands: any[]) {
+    event.preventDefault();
+
+    const url = this.router.serializeUrl(
+      this.router.createUrlTree(commands)
+    );
+
+    window.open(url, '_blank');
   }
 
   @HostListener('window:scroll', [])
