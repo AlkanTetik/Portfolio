@@ -35,7 +35,7 @@ h1 {
 .shadow-left {
   position: absolute;
   top: 80px;
-  left: 0;
+  left: -600px;
 }
 
 @keyframes popUpDown {
@@ -71,6 +71,23 @@ h1 {
       }
     }
 
+  }
+}
+
+.img-wrapper {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding-top: 10px;
+
+  >p {
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
   }
 }
 
@@ -155,8 +172,20 @@ h1 {
 
 .vectorsmall {
   position: absolute;
-  right: 0;
-  z-index: 1;
+  left: calc(100% - 101px); // 20px Abstand zum Titel
+  transform: translateY(-50%);
+  height: 3px;
+  width: 100vw; // grobe Breite ab Titel bis Rand
+  background-color: #9747FF;
+  z-index: 0;
+}
+
+.secondvectorsmall {
+  transform: translateY(-50%);
+  width: 20px;
+  height: 3px;
+  background-color: #9747FF; // nur falls du kein <img> nutzt
+  z-index: 0;
 }
 
 .hover-wrapper {
@@ -243,7 +272,13 @@ h1 {
   }
 
   .allImages {
-    width: 70px;
+    width: 40px;
+  }
+
+  .img-wrapper {
+    >p {
+      font-size: 13px;
+    }
   }
 
   .main-hover-image {
@@ -318,11 +353,6 @@ h1 {
 }
 
 @media (max-width: 550px) {
-  .skills_title_img h1 {
-    font-size: 50px;
-    padding-right: 80px;
-    z-index: 1;
-  }
 
   .skills_title {
     padding: 0;
@@ -351,13 +381,16 @@ h1 {
   }
 
   .vectorsmall {
+    display: none;
+  }
+
+  .secondvectorsmall {
     width: 40px;
-    height: 3px;
   }
 
   .skills_title_img h1 {
     font-size: 50px;
-    padding-right: 50px;
+    padding-right: 0;
   }
 
   .skills_title_text_1 {
@@ -367,7 +400,13 @@ h1 {
   }
 
   .allImages {
-    width: 55px;
+    width: 30px;
+  }
+
+  .img-wrapper {
+    >p {
+      font-size: 10px;
+    }
   }
 
   .hover-wrapper .base-image {
@@ -396,11 +435,7 @@ h1 {
   }
 
   .shadow-left {
-    top: 200px;
-
-    >.greenshadow {
-      width: 200px;
-    }
+    top: 0px;
   }
 
   .contactButton {
@@ -416,7 +451,6 @@ h1 {
 @media (max-width: 400px) {
   .skills_title_img h1 {
     font-size: 40px;
-    padding-right: 25px;
   }
 
   .skills_looking_text {

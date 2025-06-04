@@ -54,12 +54,12 @@
   "TESTIMONIALS": [
     {
       "QUOTE": "Alkan hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
-      "NAME": "V. Schuster",
+      "NAME": "Robert",
       "ROLE": "Teampartner"
     },
     {
       "QUOTE": "Alkan brachte immer frische Ideen ein und half uns, schwierige Herausforderungen zu meistern. Seine Kreativität hat das Projekt entscheidend geprägt.",
-      "NAME": "Robert",
+      "NAME": "V. Schuster",
       "ROLE": "Design Lead"
     },
     {
@@ -76,7 +76,16 @@
     "PLACEHOLDER_NAME": "Dein Name",
     "PLACEHOLDER_EMAIL": "Deine E-Mail",
     "PLACEHOLDER_MESSAGE": "Deine Nachricht",
-    "VALIDATION_MESSAGE": "Nachricht ist erforderlich",
+    "SUCCESS_MESSAGE": "Nachricht erfolgreich gesendet!",
+    "ERROR_MESSAGE": "Fehler beim Senden. Bitte später erneut versuchen.",
+    "INVALID": {
+      "NAME": "Name ist erforderlich",
+      "EMAIL": "E-Mail ist erforderlich",
+      "MESSAGE": "Nachricht ist erforderlich"
+    },
+    "TOUCHED": {
+      "EMAIL": "Bitte gib eine gültige E-Mail-Adresse ein"
+    },
     "PRIVACY_TEXT": "Ich habe die",
     "PRIVACY_LINK": "Datenschutzerklärung",
     "PRIVACY_REST": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",

@@ -26,10 +26,21 @@ section {
     }
 
     .contact-line {
-        width: 40%;
-        height: 4px;
+        transform: translateY(-50%);
+        height: 3px;
+        width: 500px;
         background-color: #9747FF;
-        border-radius: 2px;
+        z-index: 0;
+    }
+
+    .second-contact-line {
+        position: absolute;
+        right: calc(100% + 0px);
+        transform: translateY(-50%);
+        height: 3px;
+        width: 100vw;
+        background-color: #9747FF;
+        z-index: 0;
     }
 
     .contact-header h1 {
@@ -58,6 +69,7 @@ section {
         color: white;
         padding: 10px 20px;
         border-radius: 10px;
+        width: 93%;
 
         &::placeholder {
             color: white;
@@ -70,6 +82,7 @@ section {
         border-radius: 10px;
         padding: 10px 20px;
         color: white;
+        width: 93%;
 
         &::placeholder {
             color: white;
@@ -80,7 +93,6 @@ section {
     textarea:focus {
         border-color: #70E61C;
         outline: none;
-        box-shadow: 0 0 5px #70E61C;
         background-color: #1A2235;
     }
 
@@ -129,11 +141,11 @@ section {
 
 
     .contactshadow {
-        height: 650px;
-        width: 550px;
+        // height: 650px;
+        // width: 550px;
         position: absolute;
-        bottom: -150px;
-        left: 0;
+        bottom: -250px;
+        left: -600px;
         z-index: 0;
     }
 
@@ -159,6 +171,36 @@ section {
         font-size: 14px;
     }
 }
+
+.feedback-text {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 13px;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.success {
+  color: #70E61C;
+}
+
+.error {
+  color: red;
+}
+
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 1px;
+}
+
+input.invalid-input,
+textarea.invalid-input {
+    border: 2px solid red !important; // <- notfalls mit !important
+}
+
+
 
 #contact {
     scroll-margin-top: 90px;
@@ -200,10 +242,10 @@ section {
     }
 
     section .contactshadow {
-        height: 350px;
-        width: 350px;
-        bottom: -130px;
-        z-index: 0;
+        height: 400px;
+        width: 500px;
+        left: -200px;
+        bottom: -150px;
     }
 
     section .contact-line {

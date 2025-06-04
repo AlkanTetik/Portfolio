@@ -1,6 +1,7 @@
 <section class="container" id="contact">
     <div class="contact-header">
         <div class="contact-line"></div>
+        <div class="second-contact-line"></div>
         <h1>{{ 'CONTACT.TITLE' | translate }}</h1>
     </div>
 
@@ -13,16 +14,35 @@
 
         <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="fade-down">
 
-            <input [(ngModel)]="contactData.name" type="text" name="name"
-                placeholder="{{ 'CONTACT.PLACEHOLDER_NAME' | translate }}" required />
+            <div class="name-input">
+                <input [(ngModel)]="contactData.name" name="name" type="text" required #name="ngModel"
+                    [ngClass]="{ 'invalid-input': name.invalid && name.touched }"
+                    placeholder="{{ 'CONTACT.PLACEHOLDER_NAME' | translate }}" />
+                <p *ngIf="name.invalid && name.touched" class="error">
+                    {{ 'CONTACT.INVALID.NAME' | translate }}
+                </p>
+            </div>
 
-            <input [(ngModel)]="contactData.email" type="text" name="email"
-                placeholder="{{ 'CONTACT.PLACEHOLDER_EMAIL' | translate }}" required
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+            <div class="email-input">
+                <input [(ngModel)]="contactData.email" name="email" type="text" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
+                    [ngClass]="{ 'invalid-input': email.invalid && email.touched }"
+                    placeholder="{{ 'CONTACT.PLACEHOLDER_EMAIL' | translate }}" />
+                <div *ngIf="email.invalid && email.touched" class="error">
+                    <p *ngIf="email.errors?.['required']">{{ 'CONTACT.INVALID.EMAIL' | translate }}</p>
+                    <p *ngIf="email.errors?.['pattern']">{{ 'CONTACT.TOUCHED.EMAIL' | translate }}</p>
+                </div>
+            </div>
 
-            <textarea [(ngModel)]="contactData.message" name="message"
-                placeholder="{{ 'CONTACT.PLACEHOLDER_MESSAGE' | translate }}" style="height:200px" required
-                #message="ngModel"></textarea>
+            <div>
+                <textarea [(ngModel)]="contactData.message" name="message" required #message="ngModel"
+                    [ngClass]="{ 'invalid-input': message.invalid && message.touched }"
+                    placeholder="{{ 'CONTACT.PLACEHOLDER_MESSAGE' | translate }}" style="height: 200px">
+            </textarea>
+                <p *ngIf="message.invalid && message.touched" class="error">
+                    {{ 'CONTACT.INVALID.MESSAGE' | translate }}
+                </p>
+            </div>
 
             <label class="labelprivacy">
                 <input type="checkbox" name="privacy" ngModel required
@@ -39,6 +59,9 @@
 
             <button type="submit" [disabled]="!contactForm.valid">{{ 'CONTACT.BUTTON'
                 | translate }}</button>
+            <p *ngIf="feedbackMessage" [ngClass]="feedbackClass" class="feedback-text">
+                 {{ feedbackMessage | translate }}
+            </p>
         </form>
         <img class="contactshadow" src="../../assets/contactshadow.png" alt="" />
     </div>

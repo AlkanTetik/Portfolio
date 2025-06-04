@@ -112,20 +112,20 @@ export class TestimonialComponent implements OnInit, AfterViewInit, OnDestroy {
         {
           quote: res[0].QUOTE,
           name: res[0].NAME,
-          role: res[0].ROLE,
-          image: 'assets/testimonial2.jpg'
+          role: res[1].ROLE,
+          image: 'assets/testimonial1.png'
         },
         {
           quote: res[1].QUOTE,
           name: res[1].NAME,
-          role: res[1].ROLE,
+          role: res[0].ROLE,
           image: 'assets/testimonial3.jpg'
         },
         {
           quote: res[2].QUOTE,
           name: res[2].NAME,
           role: res[2].ROLE,
-          image: 'assets/testimonial1.png'
+          image: 'assets/testimonial2.jpg'
         }
       ];
     });

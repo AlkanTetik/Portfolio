@@ -76,7 +76,16 @@
     "PLACEHOLDER_NAME": "Your name",
     "PLACEHOLDER_EMAIL": "Your email",
     "PLACEHOLDER_MESSAGE": "Your message",
-    "VALIDATION_MESSAGE": "Message is required",
+    "SUCCESS_MESSAGE": "Message sent successfully!",
+    "ERROR_MESSAGE": "Something went wrong. Please try again later.",
+    "INVALID": {
+      "NAME": "Your name is required",
+      "EMAIL": "Your email is required",
+      "MESSAGE": "Your message is required"
+    },
+    "TOUCHED": {
+      "EMAIL": "Please enter a valid email address"
+    },
     "PRIVACY_TEXT": "I've read the",
     "PRIVACY_LINK": "privacy policy",
     "PRIVACY_REST": "and agree to the processing of my data as described.",

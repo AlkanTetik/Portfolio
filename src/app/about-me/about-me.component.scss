@@ -15,21 +15,25 @@ section {
     padding-bottom: 200px;
     color: white;
     z-index: 2;
+    margin: 0 auto;
+}
+
+h1 {
+    z-index: 5;
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+    font-weight: 700;
+    padding-left: 100px;
+}
+
+.content-wrapper {
     max-width: 1920px;
     margin: 0 auto;
-
-
-    >div {
-        >div {
-            >h1 {
-                z-index: 5;
-                color: rgb(255, 255, 255);
-                font-size: 90px;
-                font-weight: 700;
-                padding-left: 100px;
-            }
-        }
-    }
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
 }
 
 #aboutme {
@@ -81,24 +85,46 @@ section {
 .purpleshadow {
     position: absolute;
     top: 0;
-    right: 0;
+    right: -500px;
     z-index: -1;
 }
 
 .img_abMe {
+    position: relative;
     display: flex;
     align-items: center;
     padding-top: 150px;
 
-    >.faceself {
-        height: 650px;
+    .image-circle {
+        width: 450px;
+        height: 450px;
+        border: 4px solid #a0ff47;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .greenline {
         position: absolute;
-        right: 340px;
+        left: calc(100% + 0px);
+        transform: translateY(-50%);
+        width: 100vw;
+        height: 3px;
+        background-color: #a0ff47; // nur falls du kein <img> nutzt
+        z-index: 0;
+    }
+
+    .secondgreenline {
+        transform: translateY(-50%);
+        width: 150px;
+        height: 3px;
+        background-color: #a0ff47; // nur falls du kein <img> nutzt
+        z-index: 0;
     }
 }
 
 .image-circle {
-    border: 4px solid #a0ff47;
+    border: 3px solid #a0ff47;
     border-radius: 50%;
     overflow: hidden;
     width: 450px;
@@ -114,8 +140,26 @@ section {
 
 .buttons_atf {
     display: flex;
+    align-items: center;
     gap: 20px;
     padding-bottom: 100px;
+
+    .purpleline {
+        width: 100vw;
+        position: absolute;
+        height: 3px;
+        background-color: #A259FF;
+        right: calc(100% + 0px);
+        transform: translateY(-50%);
+    }
+
+    .secondpurpleline {
+        width: 80px;
+        right: calc(100% + 20px);
+        background-color: #A259FF;
+        transform: translateY(-50%);
+        height: 3px;
+    }
 }
 
 .hover_image {
@@ -132,14 +176,8 @@ section {
 }
 
 @media (max-width: 1350px) {
-    section {
-        >div {
-            >div {
-                >h1 {
-                    font-size: 70px;
-                }
-            }
-        }
+    h1 {
+        font-size: 70px;
     }
 
     .img_abMe {
@@ -165,21 +203,22 @@ section {
 }
 
 @media (max-width: 1280px) {
-    .image-circle {
-        width: 350px;
-        height: 350px;
+    .img_abMe {
+        >.image-circle {
+            width: 350px;
+            height: 350px;
+        }
     }
 }
 
 @media (max-width: 1080px) {
     section {
         justify-content: center;
+    }
 
-        >h1 {
-            font-size: 70px;
-            padding-left: 0;
-
-        }
+    h1 {
+        font-size: 70px;
+        padding-left: 20px;
     }
 
     .img_abMe {
@@ -204,15 +243,10 @@ section {
         font-size: 14px;
         padding-top: 0;
         padding-bottom: 150px;
+    }
 
-        >div {
-
-            >div {
-                >h1 {
-                    font-size: 50px;
-                }
-            }
-        }
+    h1 {
+        font-size: 50px;
     }
 
     .email_text {
@@ -223,14 +257,9 @@ section {
 @media (max-width: 400px) {
     section {
         font-size: 11px;
+    }
 
-        >div {
-
-            >div {
-                >h1 {
-                    font-size: 40px;
-                }
-            }
-        }
+    h1 {
+        font-size: 40px;
     }
 }

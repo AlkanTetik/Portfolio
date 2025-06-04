@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, HostListener, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact-form',
@@ -13,7 +13,8 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent implements AfterViewInit {
-  constructor(private el: ElementRef, private router: Router) { }
+  ngForm: any;
+  constructor(private el: ElementRef, private router: Router, private translate: TranslateService) { }
 
   ngAfterViewInit() {
     this.checkScroll();
@@ -54,6 +55,10 @@ export class ContactFormComponent implements AfterViewInit {
     message: ''
   }
 
+  feedbackMessage: string = '';
+  feedbackClass: string = '';
+
+
   isDisabled = true;
 
   post = {
@@ -69,17 +74,27 @@ export class ContactFormComponent implements AfterViewInit {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
-
+            this.feedbackMessage = 'CONTACT.SUCCESS_MESSAGE';
+            this.feedbackClass = 'success'; // grün
             ngForm.resetForm();
+
+            // Nach 3 Sekunden Feedback ausblenden
+            setTimeout(() => {
+              this.feedbackMessage = '';
+              this.feedbackClass = '';
+            }, 3000);
           },
           error: (error) => {
             console.error(error);
+            this.feedbackMessage = 'CONTACT.SUCCESS_MESSAGE';
+            this.feedbackClass = 'error'; // rot
           },
           complete: () => console.info('send post complete'),
         });
     }
   }
+
 }
