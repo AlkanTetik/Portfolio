@@ -163,7 +163,7 @@
 
 @media (max-width: 1350px) {
     .testimonial-container {
-        padding-bottom: 150px
+        padding-bottom: 100px
     }
 
     .image-circle {
@@ -220,11 +220,11 @@
 
 @media (max-width: 570px) {
     .quote-text {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .author {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .testimonial-box>div>hr {
@@ -248,16 +248,5 @@
     .dots span {
         width: 6px;
         height: 6px;
-    }
-
-    // .testimonialshadow {
-    //     bottom: 300px;
-    //     width: 150px;
-    // }
-}
-
-@media (max-width: 400px) {
-    .quote-text {
-        font-size: 11px;
     }
 }

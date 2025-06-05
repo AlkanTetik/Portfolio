@@ -17,7 +17,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideHttpClient(),
-    // ← hier das TranslateModule mit forRoot
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

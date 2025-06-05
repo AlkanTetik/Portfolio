@@ -15,14 +15,4 @@ export class FooterComponent {
     this.translate.setDefaultLang('en');
   }
 
-
-  openLinkInNewTab(event: MouseEvent, commands: any[]) {
-    event.preventDefault();
-
-    const url = this.router.serializeUrl(
-      this.router.createUrlTree(commands)
-    );
-
-    window.open(url, '_blank');
-  }
 }

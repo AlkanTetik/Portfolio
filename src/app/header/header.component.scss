@@ -18,7 +18,7 @@
   max-width: 1920px;
   margin: 0 auto;
   background: #141D2F;
-  padding: 20px 80px;
+  padding: 20px 0px;
 }
 
 .menu-toggle {
@@ -41,6 +41,7 @@
   color: white;
   display: flex;
   gap: 2px;
+  text-decoration: none;
 }
 
 .navbar {
@@ -102,6 +103,19 @@
 
 .nav_contact {
   display: none;
+}
+
+@media (max-width: 1930px) {
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #141D2F;
+    padding: 20px 80px;
+  }
 }
 
 @media (max-width: 1150px) {

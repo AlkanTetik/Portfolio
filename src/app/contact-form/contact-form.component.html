@@ -49,7 +49,7 @@
                     style="margin-right: 0.5rem; background-color: transparent; cursor: pointer;" />
                 <div class="privacypolicy">
                     {{ 'CONTACT.PRIVACY_TEXT' | translate }}
-                    <a routerLink="['/privacypolicy']" (click)="openLinkInNewTab($event, ['/privacypolicy'])" href="#"
+                    <a [routerLink]="['/privacypolicy']"
                         style="text-decoration: none; color: #9747FF;">
                         {{ 'CONTACT.PRIVACY_LINK' | translate }}
                     </a>

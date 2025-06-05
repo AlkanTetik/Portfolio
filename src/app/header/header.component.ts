@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // <-- hinzufügen
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, TranslateModule], // <-- CommonModule hinzufügen
+  imports: [CommonModule, TranslateModule, RouterModule], // <-- CommonModule hinzufügen
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })

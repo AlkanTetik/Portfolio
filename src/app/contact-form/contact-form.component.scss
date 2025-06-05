@@ -11,8 +11,8 @@ section {
 
     .contact-form {
         display: flex;
-        justify-content: space-around;
-        padding: 50px;
+        justify-content: space-between;
+        padding: 50px 0px;
         padding-bottom: 150px;
         gap: 20px;
     }
@@ -21,21 +21,21 @@ section {
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        gap: 1rem;
+        gap: 0;
         margin-bottom: 2rem;
     }
 
     .contact-line {
         transform: translateY(-50%);
         height: 3px;
-        width: 500px;
+        width: 0px;
         background-color: #9747FF;
         z-index: 0;
     }
 
     .second-contact-line {
         position: absolute;
-        right: calc(100% + 0px);
+        right: calc(100% + 20px);
         transform: translateY(-50%);
         height: 3px;
         width: 100vw;
@@ -141,8 +141,6 @@ section {
 
 
     .contactshadow {
-        // height: 650px;
-        // width: 550px;
         position: absolute;
         bottom: -250px;
         left: -600px;
@@ -173,19 +171,19 @@ section {
 }
 
 .feedback-text {
-  margin-top: 5px;
-  font-weight: bold;
-  font-size: 13px;
-  text-align: center;
-  transition: opacity 0.3s ease;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    transition: opacity 0.3s ease;
 }
 
 .success {
-  color: #70E61C;
+    color: #70E61C;
 }
 
 .error {
-  color: red;
+    color: red;
 }
 
 
@@ -210,6 +208,7 @@ textarea.invalid-input {
     opacity: 0;
     transform: translateY(80px);
     transition: all 0.8s ease-out;
+    z-index: 1;
 
     &.in-view {
         opacity: 1;
@@ -221,10 +220,28 @@ textarea.invalid-input {
     opacity: 0;
     transform: translateY(-80px);
     transition: all 0.8s ease-out;
+    z-index: 1;
 
     &.in-view {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@media (max-width: 1930px) {
+    section {
+        .contact-form {
+            justify-content: space-around;
+            padding: 50px;
+        }
+
+        .contact-line {
+            width: 200px;
+        }
+        
+        .contact-header {
+            gap: 1rem;
+        }
     }
 }
 
@@ -258,7 +275,7 @@ textarea.invalid-input {
     .contact-form {
         >div {
             >div {
-                font-size: 14px;
+                font-size: 16px;
             }
 
             >h2 {
@@ -298,6 +315,10 @@ textarea.invalid-input {
         bottom: 20px;
         width: 30px;
     }
+
+    section .contactshadow {
+        bottom: -200px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -308,10 +329,10 @@ textarea.invalid-input {
     }
 
     .contact-form>div>div {
-        font-size: 11px;
+        font-size: 16px;
     }
 
     section .privacypolicy {
-        font-size: 12px;
+        font-size: 15px;
     }
 }

@@ -4,8 +4,7 @@
     <div class="footer-container">
         <div class="footer-header">
             <div class="name">Alkan</div>
-            <a class="firstNotice" [routerLink]="['/imprint']" (click)="openLinkInNewTab($event, ['/imprint'])"
-                href="#">{{ 'LEGAL_NOTICE' | translate }}</a>
+            <a class="firstNotice" [routerLink]="['/imprint']">{{ 'LEGAL_NOTICE' | translate }}</a>
         </div>
         <div class="name-year">© Alkan Tetik 2025</div>
         <div class="footer-images">
@@ -16,7 +15,6 @@
             <a href="mailto: alkan.tetik.at@gmail.com" target="_blank"><img class="hover_image"
                     src="../../assets/email.png" alt=""></a>
         </div>
-        <a class="responsiveNotice" routerLink="['/imprint']" (click)="openLinkInNewTab($event, ['/imprint'])"
-            href="#">{{ 'LEGAL_NOTICE' | translate }}</a>
+        <a class="responsiveNotice" [routerLink]="['/imprint']">{{ 'LEGAL_NOTICE' | translate }}</a>
     </div>
 </section>

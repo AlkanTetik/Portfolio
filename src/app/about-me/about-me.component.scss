@@ -23,7 +23,7 @@ h1 {
     color: rgb(255, 255, 255);
     font-size: 90px;
     font-weight: 700;
-    padding-left: 100px;
+    padding-left: 0px;
 }
 
 .content-wrapper {
@@ -60,7 +60,7 @@ h1 {
 
 .info_title {
     color: white;
-    padding-left: 100px;
+    padding-left: 0px;
     display: flex;
     padding-top: 20px;
     padding-right: 20px;
@@ -68,7 +68,7 @@ h1 {
 
 .info_content {
     color: white;
-    padding-left: 100px;
+    padding-left: 0px;
     padding-right: 20px;
     padding-top: 20px;
     display: flex;
@@ -116,7 +116,7 @@ h1 {
 
     .secondgreenline {
         transform: translateY(-50%);
-        width: 150px;
+        width: 0;
         height: 3px;
         background-color: #a0ff47; // nur falls du kein <img> nutzt
         z-index: 0;
@@ -154,7 +154,7 @@ h1 {
     }
 
     .secondpurpleline {
-        width: 80px;
+        width: 0;
         right: calc(100% + 20px);
         background-color: #A259FF;
         transform: translateY(-50%);
@@ -173,6 +173,41 @@ h1 {
 
 .email_text {
     cursor: pointer;
+}
+
+@media (max-width: 1930px) {
+    .buttons_atf {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 100px;
+
+        .secondpurpleline {
+            width: 80px;
+        }
+    }
+
+    h1 {
+        z-index: 5;
+        color: rgb(255, 255, 255);
+        font-size: 90px;
+        font-weight: 700;
+        padding-left: 100px;
+    }
+
+    .info_title {
+        padding-left: 100px;
+    }
+
+    .info_content {
+        padding-left: 100px;
+    }
+
+    .img_abMe {
+        >.secondgreenline {
+            width: 150px;
+        }
+    }
 }
 
 @media (max-width: 1350px) {
@@ -240,7 +275,7 @@ h1 {
 
 @media (max-width: 550px) {
     section {
-        font-size: 14px;
+        font-size: 16px;
         padding-top: 0;
         padding-bottom: 150px;
     }
@@ -255,10 +290,6 @@ h1 {
 }
 
 @media (max-width: 400px) {
-    section {
-        font-size: 11px;
-    }
-
     h1 {
         font-size: 40px;
     }

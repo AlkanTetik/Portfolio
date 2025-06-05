@@ -56,7 +56,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  padding-left: 100px;
+  padding-left: 0px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0px 80px;
@@ -77,12 +77,12 @@ h1 {
 .img-wrapper {
   align-items: center;
   display: flex;
-  gap: 10px;
+  gap: 5px;
   flex-direction: column;
   padding-top: 10px;
 
   >p {
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Poppins", sans-serif;
     color: white;
     text-align: center;
@@ -115,14 +115,14 @@ h1 {
   flex-direction: column;
   align-items: flex-end;
   gap: 25px;
-  padding: 0 100px;
+  padding: 0 0px;
   z-index: 1;
 }
 
 .skills_title_img {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0px;
   z-index: 1;
 }
 
@@ -172,7 +172,7 @@ h1 {
 
 .vectorsmall {
   position: absolute;
-  left: calc(100% - 101px); // 20px Abstand zum Titel
+  left: calc(106% - 101px); // 20px Abstand zum Titel
   transform: translateY(-50%);
   height: 3px;
   width: 100vw; // grobe Breite ab Titel bis Rand
@@ -182,7 +182,7 @@ h1 {
 
 .secondvectorsmall {
   transform: translateY(-50%);
-  width: 20px;
+  width: 0px;
   height: 3px;
   background-color: #9747FF; // nur falls du kein <img> nutzt
   z-index: 0;
@@ -216,9 +216,9 @@ h1 {
 
   .badge-image {
     position: absolute;
-    top: 10px; // Position nach Bedarf anpassen
-    top: -100px; // Position nach Bedarf anpassen
-    width: 200px; // Größe der Bubble
+    top: 10px;
+    top: -100px;
+    width: 200px;
     height: 140px;
     z-index: 2;
   }
@@ -231,11 +231,41 @@ h1 {
     .hover-images {
       opacity: 1;
       pointer-events: auto;
-      width: 70px;
+      width: 90px;
     }
   }
 }
 
+@media (max-width: 1930px) {
+  .skills_images {
+    padding-left: 100px;
+  }
+
+  .skills_title_img {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+  }
+
+  .secondvectorsmall {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #9747FF;
+    z-index: 0;
+  }
+
+  .skills_title {
+    padding: 0 100px;
+  }
+
+  .vectorsmall {
+    display: none;
+  }
+}
 
 @media (max-width: 1350px) {
   .skills_title_img h1 {
@@ -272,22 +302,11 @@ h1 {
   }
 
   .allImages {
-    width: 40px;
-  }
-
-  .img-wrapper {
-    >p {
-      font-size: 13px;
-    }
+    width: 45px;
   }
 
   .main-hover-image {
-    width: 75px;
     display: block;
-  }
-
-  .hover-wrapper .base-image {
-    width: 75px;
   }
 
   .hover-wrapper .badge-image {
@@ -296,14 +315,6 @@ h1 {
     width: 150px;
     height: 100px;
     z-index: 2;
-  }
-
-  .hover-wrapper .main-hover-image {
-    width: 75px;
-  }
-
-  .hover-wrapper .hover-images {
-    width: 75px;
   }
 
   .skills_looking_respponsive {
@@ -360,7 +371,7 @@ h1 {
   }
 
   .skills_looking_text {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .skills_looking {
@@ -368,16 +379,16 @@ h1 {
   }
 
   .skills_title_text_1 {
-    font-size: 14px;
+    font-size: 16px;
     padding-right: 80px;
   }
 
   .skills_title_text_responsive {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .skills_images {
-    gap: 0px 30px;
+    gap: 30px 80px;
   }
 
   .vectorsmall {
@@ -390,43 +401,27 @@ h1 {
 
   .skills_title_img h1 {
     font-size: 50px;
-    padding-right: 0;
+    padding-right: 50px;
   }
 
   .skills_title_text_1 {
-    font-size: 14px;
+    font-size: 16px;
     padding-right: 45px;
     padding-left: 45px;
   }
 
-  .allImages {
-    width: 30px;
-  }
-
   .img-wrapper {
     >p {
-      font-size: 10px;
+      font-size: 16px;
     }
   }
 
-  .hover-wrapper .base-image {
-    width: 58px;
-  }
-
   .hover-wrapper .badge-image {
-    top: -60px;
-    left: 0px;
+    top: -50px;
+    left: 20px;
     width: 115px;
     height: 75px;
     z-index: 2;
-  }
-
-  .hover-wrapper .main-hover-image {
-    width: 58px;
-  }
-
-  .hover-wrapper .hover-images {
-    width: 58px;
   }
 
   .skills_looking_respponsive {
@@ -440,7 +435,7 @@ h1 {
 
   .contactButton {
     padding: 10px 20px;
-    font-size: 15px;
+    font-size: 18px;
 
     &:hover {
       padding: 12px 24px;
@@ -454,7 +449,7 @@ h1 {
   }
 
   .skills_looking_text {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .skills_looking {
@@ -462,17 +457,17 @@ h1 {
   }
 
   .skills_title_text_1 {
-    font-size: 11px;
+    font-size: 16px;
     padding-right: 25px;
     padding-left: 25px;
   }
 
   .skills_title_text_responsive {
-    font-size: 11px;
+    font-size: 16px;
   }
 
   .skills_images {
-    gap: 0px 30px;
+    gap: 20px 40px;
   }
 
   .vectorsmall {

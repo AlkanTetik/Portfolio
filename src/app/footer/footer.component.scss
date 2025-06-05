@@ -1,5 +1,5 @@
 section {
-    height: 250px;
+    height: auto;
     background-color: #141D2F;
     color: white;
     z-index: 1;
@@ -24,9 +24,10 @@ section {
 
 .footer-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding-top: 80px;
+    padding-bottom: 80px;
     max-width: 1920px;
     margin: 0 auto;
 }
@@ -42,7 +43,8 @@ section {
     flex-direction: column;
 }
 
-.responsiveNotice, .firstNotice {
+.responsiveNotice,
+.firstNotice {
     position: relative;
     top: -10px;
     text-decoration: none;
@@ -78,6 +80,12 @@ a:hover::after {
     }
 }
 
+@media (max-width: 1930px) {
+    .footer-container {
+        padding: 80px 80px;
+    }
+}
+
 @media (max-width: 1080px) {
     .name {
         font-size: 40px;
@@ -85,16 +93,20 @@ a:hover::after {
 
     .name-year {
         font-size: 18px;
+        text-align: center;
     }
 
     .firstnotice {
         font-size: 14px;
     }
+
+    .footer-container {
+        padding: 40px 40px;
+    }
 }
 
 @media (max-width: 550px) {
     .footer-container {
-        padding-top: 30px;
         flex-direction: column;
         gap: 20px;
     }
