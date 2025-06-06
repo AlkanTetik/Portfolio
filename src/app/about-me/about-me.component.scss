@@ -37,7 +37,7 @@ h1 {
 }
 
 #aboutme {
-    scroll-margin-top: 120px; // Adjust this to your header height
+    scroll-margin-top: 250px;
 }
 
 .fade-left {
@@ -93,7 +93,6 @@ h1 {
     position: relative;
     display: flex;
     align-items: center;
-    padding-top: 150px;
 
     .image-circle {
         width: 450px;
@@ -110,7 +109,7 @@ h1 {
         transform: translateY(-50%);
         width: 100vw;
         height: 3px;
-        background-color: #a0ff47; // nur falls du kein <img> nutzt
+        background-color: #a0ff47; 
         z-index: 0;
     }
 
@@ -118,7 +117,7 @@ h1 {
         transform: translateY(-50%);
         width: 0;
         height: 3px;
-        background-color: #a0ff47; // nur falls du kein <img> nutzt
+        background-color: #a0ff47;
         z-index: 0;
     }
 }
@@ -218,7 +217,7 @@ h1 {
     .img_abMe {
         display: flex;
         align-items: center;
-        padding-top: 220px;
+        padding-top: 100px;
 
         >.faceself {
             height: 500px;

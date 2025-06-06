@@ -21,7 +21,7 @@ section {
 }
 
 #skills {
-  scroll-margin-top: 250px; // Passe das an deine Header-Höhe an
+  scroll-margin-top: 250px;
 }
 
 
@@ -172,10 +172,10 @@ h1 {
 
 .vectorsmall {
   position: absolute;
-  left: calc(106% - 101px); // 20px Abstand zum Titel
+  left: calc(106% - 101px); 
   transform: translateY(-50%);
   height: 3px;
-  width: 100vw; // grobe Breite ab Titel bis Rand
+  width: 100vw; 
   background-color: #9747FF;
   z-index: 0;
 }
@@ -184,7 +184,7 @@ h1 {
   transform: translateY(-50%);
   width: 0px;
   height: 3px;
-  background-color: #9747FF; // nur falls du kein <img> nutzt
+  background-color: #9747FF; 
   z-index: 0;
 }
 

@@ -82,6 +82,56 @@ section {
     }
 }
 
+.scrollandbuttons {
+    flex-direction: row-reverse;
+    display: flex;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 200px;
+    z-index: 1;
+}
+
+.buttons_atf {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+
+    .purpleline {
+        width: 100vw;
+        position: absolute;
+        height: 3px;
+        background-color: #A259FF;
+        right: calc(100% + 20px);
+        transform: translateY(-50%);
+    }
+
+    .secondpurpleline {
+        width: 0;
+        right: calc(100% + 20px);
+        background-color: #A259FF;
+        transform: translateY(-50%);
+        height: 3px;
+        display: none;
+    }
+}
+
+.hover_image {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.email_text {
+    cursor: pointer;
+}
+
 .name_atf {
     display: flex;
     align-items: center;
@@ -131,16 +181,18 @@ section {
     margin: 0 auto;
 }
 
-.scroll_down_text {
+.scroll_down_container {
     transform: rotate(90deg) translateX(10px);
-    position: absolute;
-    right: 0;
-    top: 900px;
+    transition: all 0.3s ease-in-out;
+    animation: float 2s ease-in-out infinite; 
+}
+
+.scroll_down_text {
     font-size: 25px;
     z-index: 3;
-    transition: all 0.3s ease-in-out;
-
-    animation: float 2s ease-in-out infinite; // ✅ hier ist die Schwebebewegung
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
 
     &.in-view {
         transform: rotate(90deg) translateX(0);
@@ -161,17 +213,6 @@ section {
     }
 }
 
-
-.buttons_atf {
-    position: absolute;
-    top: 1000px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    display: flex;
-    gap: 20px;
-}
-
 .hover_image {
     transition: 0.2s ease-in-out;
     cursor: pointer;
@@ -190,6 +231,20 @@ section {
     top: 850px;
     right: 0;
     z-index: 1;
+}
+
+@media (max-width: 1930px) {
+    .buttons_atf {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        top: 100px;
+
+        .secondpurpleline {
+            width: 80px;
+            display: flex;
+        }
+    }
 }
 
 @media (max-width: 1450px) {
@@ -222,7 +277,6 @@ section {
 
     .name_content {
         font-size: 50px;
-        padding-top: 100px;
 
         >a {
             font-size: 18px;
@@ -355,10 +409,6 @@ section {
     .name_iam {
         display: none;
     }
-
-    .buttons_atf {
-        top: 900px;
-    }
 }
 
 @media (max-width: 645px) {
@@ -452,5 +502,9 @@ section {
 
     .name_content {
         padding-top: 0;
+    }
+
+    .buttons_atf {
+        top: 150px;
     }
 }
